@@ -85,16 +85,16 @@ python excel_image_scraper.py input.xlsx --debug
 1.  **Excel読み込み:** `openpyxl` で指定されたExcelファイルとシートを読み込み、ヘッダー行から指定された列（URL, 画像URL出力, 画像埋め込み）のインデックスを取得します。
 2.  **URL処理ループ:** 各行のURLセルを読み取ります。
 3.  **画像URL抽出:**
-    a.  **Requests試行:** まず `requests` でURLにアクセスし、HTMLコンテンツを取得します。
-    b.  **HTML解析:** `BeautifulSoup` を用いてHTMLを解析し、以下の優先順位で画像URLを探します:
+    1.  **Requests試行:** まず `requests` でURLにアクセスし、HTMLコンテンツを取得します。
+    2.  **HTML解析:** `BeautifulSoup` を用いてHTMLを解析し、以下の優先順位で画像URLを探します:
         -   `og:image` メタタグ
         -   `twitter:image` メタタグ
         -   サイト固有の抽出ロジック (Mercariの `__NEXT_DATA__` など)
         -   `application/ld+json` (JSON-LD) 内の画像情報
         -   サイト固有の `<img>` タグ属性 (AmazonのコンテナIDなど)
         -   一般的な `<img>` タグ (ただし、アイコン、広告、極端に小さい画像などは除外)
-    c.  **Seleniumフォールバック:** `requests` でのアクセスに失敗した場合、または対象ドメインが `SELENIUM_ONLY_DOMAINS` リストに含まれる場合、`Selenium` (ヘッドレスChrome) を起動してページを読み込み、動的に生成されたHTMLソースを取得して再度 `BeautifulSoup` で解析します。
-    d.  **結果記録:** 見つかった画像URLを指定された列に書き込みます。見つからない場合やエラーが発生した場合は、エラーメッセージを書き込みます。
+    3.  **Seleniumフォールバック:** `requests` でのアクセスに失敗した場合、または対象ドメインが `SELENIUM_ONLY_DOMAINS` リストに含まれる場合、`Selenium` (ヘッドレスChrome) を起動してページを読み込み、動的に生成されたHTMLソースを取得して再度 `BeautifulSoup` で解析します。
+    4.  **結果記録:** 見つかった画像URLを指定された列に書き込みます。見つからない場合やエラーが発生した場合は、エラーメッセージを書き込みます。
 4.  **画像ダウンロードと埋め込み:**
     a.  画像URLが見つかった場合、`requests` で画像をダウンロードします。
     b.  `Pillow` で画像データを開き、指定された幅にリサイズします (アスペクト比は維持)。適切な画像フォーマット (JPEG, PNGなど) に変換します。
