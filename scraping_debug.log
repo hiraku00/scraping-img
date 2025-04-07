@@ -1,437 +1,423 @@
-2025-04-07 00:41:17,199 - INFO - [<module>] - デバッグログを有効にし、scraping_debug.log に出力します。
-2025-04-07 00:41:17,230 - INFO - [<module>] - Excelファイル読み込み完了 (0.031s)
-2025-04-07 00:41:17,231 - DEBUG - [_default_options] - WebDriver オプション初期化
-2025-04-07 00:41:17,231 - INFO - [__enter__] - WebDriverを初期化しています (ヘッドレスモード)...
-2025-04-07 00:41:17,696 - INFO - [__enter__] - WebDriverの準備が完了しました。(0.464s)
-2025-04-07 00:41:17,696 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
-2025-04-07 00:41:18,213 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.517s
-2025-04-07 00:41:18,424 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 256
-2025-04-07 00:41:18,424 - DEBUG - [feed] - EUC-JP Japanese prober hit error at byte 219
-2025-04-07 00:41:18,424 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 233
-2025-04-07 00:41:18,424 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 219
-2025-04-07 00:41:18,424 - DEBUG - [feed] - CP949 Korean prober hit error at byte 219
-2025-04-07 00:41:18,424 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 220
-2025-04-07 00:41:18,424 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 219
-2025-04-07 00:41:18,424 - DEBUG - [feed] - Johab Korean prober hit error at byte 219
-2025-04-07 00:41:18,526 - DEBUG - [feed] - ISO-8859-5 confidence = 0.041937876558003837, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,563 - DEBUG - [feed] - MacCyrillic confidence = 0.012194394611698783, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,669 - DEBUG - [feed] - ISO-8859-7 confidence = 0.010513919508365267, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,702 - DEBUG - [feed] - windows-1253 confidence = 0.01039600801902212, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,737 - DEBUG - [feed] - ISO-8859-5 confidence = 0.027753817230886508, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,770 - DEBUG - [feed] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,805 - DEBUG - [feed] - TIS-620 confidence = 0.03787536841187891, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,901 - DEBUG - [feed] - windows-1255 confidence = 0.007298222747586538, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,936 - DEBUG - [feed] - windows-1255 confidence = 0.00457882127794442, below negative shortcut threshold 0.05
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - MacCyrillic not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11663631815108226
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12424067473257341
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - TIS-620 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.3731099404632328
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - MacCyrillic not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11663631815108226
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12424067473257341
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - TIS-620 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.3731099404632328
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:18,995 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:18,998 - INFO - [get_image_url_from_url] - --- URL: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html (Final: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html) ---
-2025-04-07 00:41:18,998 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:18,998 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
-2025-04-07 00:41:19,026 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.028s
-2025-04-07 00:41:19,026 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0001s)
-2025-04-07 00:41:19,026 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:41:19,026 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.028s
-2025-04-07 00:41:19,027 - DEBUG - [<module>] - Row 2: get_image_url_from_url finished in 1.331s
-2025-04-07 00:41:19,027 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
-2025-04-07 00:41:19,096 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.069s. Status: 200
-2025-04-07 00:41:19,152 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.055s
-2025-04-07 00:41:19,153 - DEBUG - [<module>] - Row 2: download_and_prepare_image finished in 0.126s
-2025-04-07 00:41:19,153 - INFO - [<module>] - 行 2: 画像埋込完了 -> D2
-2025-04-07 00:41:19,153 - DEBUG - [<module>] - Row 2: Excel embedding finished in 0.000s
-2025-04-07 00:41:20,156 - DEBUG - [<module>] - Row 2: Post-URL sleep completed in 1.003s
-2025-04-07 00:41:20,157 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/w1123979952
-2025-04-07 00:41:20,494 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.337s
-2025-04-07 00:41:20,569 - INFO - [get_image_url_from_url] - --- URL: https://auctions.yahoo.co.jp/jp/auction/w1123979952 (Final: https://auctions.yahoo.co.jp/jp/auction/w1123979952) ---
-2025-04-07 00:41:20,569 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:20,569 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://auctions.yahoo.co.jp/jp/auction/w1123979952
-2025-04-07 00:41:20,576 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.006s
-2025-04-07 00:41:20,576 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0000s)
-2025-04-07 00:41:20,576 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:41:20,576 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.007s
-2025-04-07 00:41:20,577 - DEBUG - [<module>] - Row 3: get_image_url_from_url finished in 0.420s
-2025-04-07 00:41:20,577 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0502/users/f3559cade889ae09f8a6baac1b569ce9599bcef1/i-img800x600-1707176321uuljce240144.jpg
-2025-04-07 00:41:20,661 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.084s. Status: 200
-2025-04-07 00:41:20,712 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.051s
-2025-04-07 00:41:20,713 - DEBUG - [<module>] - Row 3: download_and_prepare_image finished in 0.136s
-2025-04-07 00:41:20,713 - INFO - [<module>] - 行 3: 画像埋込完了 -> D3
-2025-04-07 00:41:20,713 - DEBUG - [<module>] - Row 3: Excel embedding finished in 0.000s
-2025-04-07 00:41:21,716 - DEBUG - [<module>] - Row 3: Post-URL sleep completed in 1.002s
-2025-04-07 00:41:21,716 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/h1179048755
-2025-04-07 00:41:22,025 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.309s
-2025-04-07 00:41:22,085 - INFO - [get_image_url_from_url] - --- URL: https://auctions.yahoo.co.jp/jp/auction/h1179048755 (Final: https://auctions.yahoo.co.jp/jp/auction/h1179048755) ---
-2025-04-07 00:41:22,085 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:22,085 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://auctions.yahoo.co.jp/jp/auction/h1179048755
-2025-04-07 00:41:22,090 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.006s
-2025-04-07 00:41:22,091 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0000s)
-2025-04-07 00:41:22,091 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:41:22,091 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.006s
-2025-04-07 00:41:22,091 - DEBUG - [<module>] - Row 4: get_image_url_from_url finished in 0.375s
-2025-04-07 00:41:22,091 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
-2025-04-07 00:41:22,160 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.069s. Status: 200
-2025-04-07 00:41:22,236 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.075s
-2025-04-07 00:41:22,237 - DEBUG - [<module>] - Row 4: download_and_prepare_image finished in 0.145s
-2025-04-07 00:41:22,237 - INFO - [<module>] - 行 4: 画像埋込完了 -> D4
-2025-04-07 00:41:22,237 - DEBUG - [<module>] - Row 4: Excel embedding finished in 0.000s
-2025-04-07 00:41:23,241 - DEBUG - [<module>] - Row 4: Post-URL sleep completed in 1.004s
-2025-04-07 00:41:23,242 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist
-2025-04-07 00:41:33,450 - DEBUG - [get_image_url_from_url] - requests.get() completed in 10.208s
-2025-04-07 00:41:33,504 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 399
-2025-04-07 00:41:33,673 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 379
-2025-04-07 00:41:33,673 - DEBUG - [feed] - CP949 Korean prober hit error at byte 379
-2025-04-07 00:41:33,692 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 52754
-2025-04-07 00:41:33,692 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 362
-2025-04-07 00:41:33,777 - DEBUG - [feed] - windows-1251 confidence = 0.020973223521431644, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,805 - DEBUG - [feed] - ISO-8859-5 confidence = 0.019751360691385427, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,848 - DEBUG - [feed] - IBM855 confidence = 0.037324702505983194, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,889 - DEBUG - [feed] - ISO-8859-5 confidence = 0.026492412152596543, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,903 - DEBUG - [feed] - windows-1251 confidence = 0.031123163100600485, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,960 - DEBUG - [feed] - windows-1255 confidence = 0.029023004541020598, below negative shortcut threshold 0.05
-2025-04-07 00:41:33,974 - DEBUG - [feed] - windows-1255 confidence = 0.025151561355778448, below negative shortcut threshold 0.05
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - GB2312 Chinese confidence = 0.15420840329646998
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - CP949 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - Big5 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - Johab Korean confidence = 0.0528969563623029
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.11550465213397806
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - MacCyrillic Russian confidence = 0.0
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.28909060834350847
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - IBM855 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - ISO-8859-7 Greek confidence = 0.05542427473998372
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1253 Greek confidence = 0.05858769997558326
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - TIS-620 Thai confidence = 0.1399138759065723
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.27010244337938377
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1255 Hebrew confidence = 0.0
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - GB2312 Chinese confidence = 0.15420840329646998
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - CP949 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - Big5 not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-07 00:41:34,009 - DEBUG - [get_confidence] - Johab Korean confidence = 0.0528969563623029
-2025-04-07 00:41:34,012 - INFO - [get_image_url_from_url] - --- URL: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist (Final: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist) ---
-2025-04-07 00:41:34,012 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:34,012 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist
-2025-04-07 00:41:34,029 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.016s
-2025-04-07 00:41:34,029 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0001s)
-2025-04-07 00:41:34,029 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:41:34,029 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.017s
-2025-04-07 00:41:34,030 - DEBUG - [<module>] - Row 5: get_image_url_from_url finished in 10.788s
-2025-04-07 00:41:34,030 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://shop.r10s.jp/krdirect/cabinet/newpc/cm15j_01_n95_256.jpg
-2025-04-07 00:41:34,113 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.083s. Status: 200
-2025-04-07 00:41:34,150 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.037s
-2025-04-07 00:41:34,151 - DEBUG - [<module>] - Row 5: download_and_prepare_image finished in 0.121s
-2025-04-07 00:41:34,151 - INFO - [<module>] - 行 5: 画像埋込完了 -> D5
-2025-04-07 00:41:34,151 - DEBUG - [<module>] - Row 5: Excel embedding finished in 0.000s
-2025-04-07 00:41:35,152 - DEBUG - [<module>] - Row 5: Post-URL sleep completed in 1.001s
-2025-04-07 00:41:35,153 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/pururunhime/8360_sele/
-2025-04-07 00:41:45,382 - DEBUG - [get_image_url_from_url] - requests.get() completed in 10.229s
-2025-04-07 00:41:45,431 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 368
-2025-04-07 00:41:45,604 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 448
-2025-04-07 00:41:45,604 - DEBUG - [feed] - CP949 Korean prober hit error at byte 448
-2025-04-07 00:41:45,677 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 386
-2025-04-07 00:41:45,705 - DEBUG - [feed] - Johab Korean prober hit error at byte 79998
-2025-04-07 00:41:45,720 - DEBUG - [feed] - windows-1251 confidence = 0.009793656245819316, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,748 - DEBUG - [feed] - ISO-8859-5 confidence = 0.017982442598895514, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,791 - DEBUG - [feed] - IBM855 confidence = 0.049306469677094726, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,805 - DEBUG - [feed] - ISO-8859-7 confidence = 0.021979734756763927, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,820 - DEBUG - [feed] - windows-1253 confidence = 0.022565104031954424, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,834 - DEBUG - [feed] - ISO-8859-5 confidence = 0.027420470324077708, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,849 - DEBUG - [feed] - windows-1251 confidence = 0.013311731565682503, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,907 - DEBUG - [feed] - windows-1255 confidence = 0.0186388758243425, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,921 - DEBUG - [feed] - windows-1255 confidence = 0.0193806025901379, below negative shortcut threshold 0.05
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - GB2312 Chinese confidence = 0.17040839252691795
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - CP949 not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - Big5 Chinese confidence = 0.36252925272078707
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - Johab not active
-2025-04-07 00:41:45,957 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.10834509009501003
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - MacCyrillic Russian confidence = 0.01
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.32595605660985477
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - IBM855 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - TIS-620 Thai confidence = 0.11350618277092178
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.28656506229633344
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - windows-1255 Hebrew confidence = 0.0
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - GB2312 Chinese confidence = 0.17040839252691795
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - CP949 not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - Big5 Chinese confidence = 0.36252925272078707
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-07 00:41:45,958 - DEBUG - [get_confidence] - Johab not active
-2025-04-07 00:41:45,958 - INFO - [get_image_url_from_url] - --- URL: https://item.rakuten.co.jp/pururunhime/8360_sele/ (Final: https://item.rakuten.co.jp/pururunhime/8360_sele/) ---
-2025-04-07 00:41:45,958 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:45,958 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.rakuten.co.jp/pururunhime/8360_sele/
-2025-04-07 00:41:45,973 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.014s
-2025-04-07 00:41:45,973 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0001s)
-2025-04-07 00:41:45,973 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:41:45,973 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.014s
-2025-04-07 00:41:45,974 - DEBUG - [<module>] - Row 6: get_image_url_from_url finished in 10.821s
-2025-04-07 00:41:45,974 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
-2025-04-07 00:41:46,045 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.071s. Status: 200
-2025-04-07 00:41:46,118 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.073s
-2025-04-07 00:41:46,119 - DEBUG - [<module>] - Row 6: download_and_prepare_image finished in 0.145s
-2025-04-07 00:41:46,119 - INFO - [<module>] - 行 6: 画像埋込完了 -> D6
-2025-04-07 00:41:46,119 - DEBUG - [<module>] - Row 6: Excel embedding finished in 0.000s
-2025-04-07 00:41:47,121 - DEBUG - [<module>] - Row 6: Post-URL sleep completed in 1.002s
-2025-04-07 00:41:47,122 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw
-2025-04-07 00:41:49,086 - DEBUG - [get_image_url_from_url] - requests.get() completed in 1.964s
-2025-04-07 00:41:49,592 - INFO - [get_image_url_from_url] - --- URL: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw (Final: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw) ---
-2025-04-07 00:41:49,592 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:49,592 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw
-2025-04-07 00:41:49,651 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.059s
-2025-04-07 00:41:49,654 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: False (0.0027s)
-2025-04-07 00:41:49,656 - DEBUG - [extract_meta_name] - extract_meta_name(twitter:image) found: False (0.0025s)
-2025-04-07 00:41:49,659 - DEBUG - [extract_json_ld_image] - Found 0 application/ld+json scripts (0.0030s)
-2025-04-07 00:41:49,659 - DEBUG - [extract_json_ld_image] - extract_json_ld_image: No image found. Total time: (0.0031s)
-2025-04-07 00:41:49,661 - INFO - [parse_html_for_image] - Found potential main image via ID (Amazon)
-2025-04-07 00:41:49,661 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.069s
-2025-04-07 00:41:49,661 - DEBUG - [<module>] - Row 7: get_image_url_from_url finished in 2.540s
-2025-04-07 00:41:49,662 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://m.media-amazon.com/images/I/41AdDiZuVBL._SY445_SX342_.jpg
-2025-04-07 00:41:49,746 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.084s. Status: 200
-2025-04-07 00:41:49,751 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.005s
-2025-04-07 00:41:49,752 - DEBUG - [<module>] - Row 7: download_and_prepare_image finished in 0.090s
-2025-04-07 00:41:49,752 - INFO - [<module>] - 行 7: 画像埋込完了 -> D7
-2025-04-07 00:41:49,752 - DEBUG - [<module>] - Row 7: Excel embedding finished in 0.000s
-2025-04-07 00:41:50,754 - DEBUG - [<module>] - Row 7: Post-URL sleep completed in 1.002s
-2025-04-07 00:41:50,755 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1
-2025-04-07 00:41:53,362 - DEBUG - [get_image_url_from_url] - requests.get() completed in 2.606s
-2025-04-07 00:41:53,884 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 82705
-2025-04-07 00:41:53,935 - DEBUG - [feed] - EUC-JP Japanese prober hit error at byte 82521
-2025-04-07 00:41:53,963 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 82553
-2025-04-07 00:41:53,992 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 82521
-2025-04-07 00:41:54,020 - DEBUG - [feed] - CP949 Korean prober hit error at byte 82521
-2025-04-07 00:41:54,049 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 82524
-2025-04-07 00:41:54,077 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 82521
-2025-04-07 00:41:54,105 - DEBUG - [feed] - Johab Korean prober hit error at byte 82521
-2025-04-07 00:41:54,575 - DEBUG - [feed] - ISO-8859-5 confidence = 0.04436071363439962, below negative shortcut threshold 0.05
-2025-04-07 00:41:54,736 - DEBUG - [feed] - MacCyrillic confidence = 0.012244774654995067, below negative shortcut threshold 0.05
-2025-04-07 00:41:55,212 - DEBUG - [feed] - ISO-8859-7 confidence = 0.022159097270753568, below negative shortcut threshold 0.05
-2025-04-07 00:41:55,368 - DEBUG - [feed] - windows-1253 confidence = 0.020306495490562286, below negative shortcut threshold 0.05
-2025-04-07 00:41:55,525 - DEBUG - [feed] - ISO-8859-5 confidence = 0.03477401172452345, below negative shortcut threshold 0.05
-2025-04-07 00:41:55,682 - DEBUG - [feed] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
-2025-04-07 00:41:55,839 - DEBUG - [feed] - TIS-620 confidence = 0.04192858624703498, below negative shortcut threshold 0.05
-2025-04-07 00:41:56,266 - DEBUG - [feed] - windows-1255 confidence = 0.007389470366652364, below negative shortcut threshold 0.05
-2025-04-07 00:41:56,423 - DEBUG - [feed] - windows-1255 confidence = 0.0028457322050299536, below negative shortcut threshold 0.05
-2025-04-07 00:41:56,677 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
-2025-04-07 00:41:56,677 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
-2025-04-07 00:41:56,677 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:56,677 - DEBUG - [get_confidence] - MacCyrillic not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.14075684591655305
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.11046947803655353
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - TIS-620 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.4660170389420469
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:56,678 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-07 00:41:56,684 - INFO - [get_image_url_from_url] - --- URL: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1 (Final: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1) ---
-2025-04-07 00:41:56,684 - INFO - [get_image_url_from_url] - Response Code: 200
-2025-04-07 00:41:56,684 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1
-2025-04-07 00:41:56,816 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.131s
-2025-04-07 00:41:56,821 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: False (0.0050s)
-2025-04-07 00:41:56,826 - DEBUG - [extract_meta_name] - extract_meta_name(twitter:image) found: False (0.0051s)
-2025-04-07 00:41:56,832 - DEBUG - [extract_json_ld_image] - Found 0 application/ld+json scripts (0.0055s)
-2025-04-07 00:41:56,832 - DEBUG - [extract_json_ld_image] - extract_json_ld_image: No image found. Total time: (0.0056s)
-2025-04-07 00:41:56,834 - INFO - [parse_html_for_image] - Found potential main image via ID (Amazon)
-2025-04-07 00:41:56,834 - DEBUG - [get_image_url_from_url] - parse_html_for_image (requests) completed in 0.150s
-2025-04-07 00:41:56,835 - DEBUG - [<module>] - Row 8: get_image_url_from_url finished in 6.080s
-2025-04-07 00:41:56,835 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://m.media-amazon.com/images/I/61djQzEzpxL.__AC_SX300_SY300_QL70_ML2_.jpg
-2025-04-07 00:41:56,894 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.058s. Status: 200
-2025-04-07 00:41:56,895 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.002s
-2025-04-07 00:41:56,896 - DEBUG - [<module>] - Row 8: download_and_prepare_image finished in 0.061s
-2025-04-07 00:41:56,897 - INFO - [<module>] - 行 8: 画像埋込完了 -> D8
-2025-04-07 00:41:56,897 - DEBUG - [<module>] - Row 8: Excel embedding finished in 0.000s
-2025-04-07 00:41:57,903 - DEBUG - [<module>] - Row 8: Post-URL sleep completed in 1.006s
-2025-04-07 00:41:57,905 - INFO - [get_image_url_from_url] - Domain 'www.ebay.com' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
-2025-04-07 00:41:57,905 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
-2025-04-07 00:41:59,387 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 1.482s
-2025-04-07 00:41:59,387 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
-2025-04-07 00:41:59,888 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.500s
-2025-04-07 00:41:59,965 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.077s
-2025-04-07 00:41:59,965 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl)
-2025-04-07 00:41:59,965 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
-2025-04-07 00:42:00,002 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.037s
-2025-04-07 00:42:00,002 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0001s)
-2025-04-07 00:42:00,002 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:42:00,003 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
-2025-04-07 00:42:00,003 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 2.098s
-2025-04-07 00:42:00,003 - DEBUG - [<module>] - Row 9: get_image_url_from_url finished in 2.098s
-2025-04-07 00:42:00,003 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://i.ebayimg.com/images/g/Cb4AAOSw~N1jvHzk/s-l400.jpg
-2025-04-07 00:42:00,082 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.079s. Status: 200
-2025-04-07 00:42:00,091 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.009s
-2025-04-07 00:42:00,092 - DEBUG - [<module>] - Row 9: download_and_prepare_image finished in 0.089s
-2025-04-07 00:42:00,092 - INFO - [<module>] - 行 9: 画像埋込完了 -> D9
-2025-04-07 00:42:00,092 - DEBUG - [<module>] - Row 9: Excel embedding finished in 0.000s
-2025-04-07 00:42:01,093 - DEBUG - [<module>] - Row 9: Post-URL sleep completed in 1.001s
-2025-04-07 00:42:01,094 - INFO - [get_image_url_from_url] - Domain 'jp.mercari.com' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://jp.mercari.com/item/m23341612611
-2025-04-07 00:42:01,094 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://jp.mercari.com/item/m23341612611
-2025-04-07 00:42:02,763 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 1.666s
-2025-04-07 00:42:02,763 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
-2025-04-07 00:42:03,268 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.505s
-2025-04-07 00:42:03,283 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.015s
-2025-04-07 00:42:03,283 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://jp.mercari.com/item/m23341612611)
-2025-04-07 00:42:03,283 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://jp.mercari.com/item/m23341612611
-2025-04-07 00:42:03,297 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.014s
-2025-04-07 00:42:03,297 - DEBUG - [extract_meta_property] - extract_meta_property(og:image) found: True (0.0001s)
-2025-04-07 00:42:03,298 - INFO - [parse_html_for_image] - Found og:image
-2025-04-07 00:42:03,298 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
-2025-04-07 00:42:03,298 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 2.204s
-2025-04-07 00:42:03,298 - DEBUG - [<module>] - Row 10: get_image_url_from_url finished in 2.204s
-2025-04-07 00:42:03,298 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://static.mercdn.net/item/detail/orig/photos/m23341612611_1.jpg?1734611979
-2025-04-07 00:42:03,393 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.095s. Status: 200
-2025-04-07 00:42:03,424 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.031s
-2025-04-07 00:42:03,425 - DEBUG - [<module>] - Row 10: download_and_prepare_image finished in 0.127s
-2025-04-07 00:42:03,425 - INFO - [<module>] - 行 10: 画像埋込完了 -> D10
-2025-04-07 00:42:03,425 - DEBUG - [<module>] - Row 10: Excel embedding finished in 0.000s
-2025-04-07 00:42:04,427 - DEBUG - [<module>] - Row 10: Post-URL sleep completed in 1.001s
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 11: Skipping empty URL.
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 12: Skipping empty URL.
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 13: Skipping empty URL.
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 14: Skipping empty URL.
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 15: Skipping empty URL.
-2025-04-07 00:42:04,428 - DEBUG - [<module>] - Row 16: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 17: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 18: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 19: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 20: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 21: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 22: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 23: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 24: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 25: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 26: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 27: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 28: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 29: Skipping empty URL.
-2025-04-07 00:42:04,429 - DEBUG - [<module>] - Row 30: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 31: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 32: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 33: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 34: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 35: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 36: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 37: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 38: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 39: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 40: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 41: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 42: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 43: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 44: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 45: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 46: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 47: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 48: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 49: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 50: Skipping empty URL.
-2025-04-07 00:42:04,430 - DEBUG - [<module>] - Row 51: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 52: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 53: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 54: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 55: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 56: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 57: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 58: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 59: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 60: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 61: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 62: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 63: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 64: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 65: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 66: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 67: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 68: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 69: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 70: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 71: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 72: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 73: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 74: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 75: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 76: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 77: Skipping empty URL.
-2025-04-07 00:42:04,431 - DEBUG - [<module>] - Row 78: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 79: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 80: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 81: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 82: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 83: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 84: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 85: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 86: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 87: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 88: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 89: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 90: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 91: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 92: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 93: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 94: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 95: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 96: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 97: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 98: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 99: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 100: Skipping empty URL.
-2025-04-07 00:42:04,432 - DEBUG - [<module>] - Row 101: Skipping empty URL.
-2025-04-07 00:42:04,545 - INFO - [__exit__] - WebDriverを終了しました。(0.113s)
-2025-04-07 00:42:04,570 - INFO - [<module>] - Excel file saving completed in 0.025s
-2025-04-07 00:42:04,571 - INFO - [<module>] - ワークブックを閉じました。
+2025-04-07 16:32:05,482 - INFO - [<module>] - Excelファイル読み込み完了 (0.038s)
+2025-04-07 16:32:05,482 - DEBUG - [_default_options] - WebDriver オプション初期化
+2025-04-07 16:32:05,482 - INFO - [__enter__] - WebDriverを初期化しています (ヘッドレスモード)...
+2025-04-07 16:32:05,937 - INFO - [__enter__] - WebDriverの準備が完了しました。(0.455s)
+2025-04-07 16:32:05,937 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
+2025-04-07 16:32:06,556 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.619s
+2025-04-07 16:32:06,762 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 256
+2025-04-07 16:32:06,762 - DEBUG - [feed] - EUC-JP Japanese prober hit error at byte 219
+2025-04-07 16:32:06,762 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 233
+2025-04-07 16:32:06,762 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 219
+2025-04-07 16:32:06,762 - DEBUG - [feed] - CP949 Korean prober hit error at byte 219
+2025-04-07 16:32:06,762 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 220
+2025-04-07 16:32:06,763 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 219
+2025-04-07 16:32:06,763 - DEBUG - [feed] - Johab Korean prober hit error at byte 219
+2025-04-07 16:32:06,865 - DEBUG - [feed] - ISO-8859-5 confidence = 0.041431096109667546, below negative shortcut threshold 0.05
+2025-04-07 16:32:06,902 - DEBUG - [feed] - MacCyrillic confidence = 0.01234187357097766, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,008 - DEBUG - [feed] - ISO-8859-7 confidence = 0.010674629805934947, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,042 - DEBUG - [feed] - windows-1253 confidence = 0.010573530911474744, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,077 - DEBUG - [feed] - ISO-8859-5 confidence = 0.02786748775982991, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,110 - DEBUG - [feed] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,147 - DEBUG - [feed] - TIS-620 confidence = 0.03790379330815653, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,262 - DEBUG - [feed] - windows-1255 confidence = 0.007335964714441837, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,298 - DEBUG - [feed] - windows-1255 confidence = 0.00454460707152529, below negative shortcut threshold 0.05
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - MacCyrillic not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11599504030416727
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12543657930076527
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-7 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - windows-1253 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - TIS-620 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.37290626406780963
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
+2025-04-07 16:32:07,358 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - MacCyrillic not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11599504030416727
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12543657930076527
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-7 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - windows-1253 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - TIS-620 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.37290626406780963
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:07,359 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:07,362 - INFO - [get_image_url_from_url] - --- URL: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html (Final: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html) --- Response Code: 200
+2025-04-07 16:32:07,362 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
+2025-04-07 16:32:07,391 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.028s
+2025-04-07 16:32:07,391 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:07,392 - DEBUG - [<module>] - Row 2: get_image_url_from_url finished in 1.455s
+2025-04-07 16:32:07,392 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
+2025-04-07 16:32:07,574 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.182s. Status: 200
+2025-04-07 16:32:07,632 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.058s
+2025-04-07 16:32:07,634 - DEBUG - [<module>] - Row 2: download_and_prepare_image finished in 0.242s
+2025-04-07 16:32:07,634 - INFO - [<module>] - 行 2: 画像埋込完了 -> D2
+2025-04-07 16:32:07,634 - DEBUG - [<module>] - Row 2: Excel embedding finished in 0.000s
+2025-04-07 16:32:08,639 - DEBUG - [<module>] - Row 2: Post-URL sleep completed in 1.005s
+2025-04-07 16:32:08,642 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/w1123979952
+2025-04-07 16:32:08,967 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.324s
+2025-04-07 16:32:09,041 - INFO - [get_image_url_from_url] - --- URL: https://auctions.yahoo.co.jp/jp/auction/w1123979952 (Final: https://auctions.yahoo.co.jp/jp/auction/w1123979952) --- Response Code: 200
+2025-04-07 16:32:09,041 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://auctions.yahoo.co.jp/jp/auction/w1123979952
+2025-04-07 16:32:09,047 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.006s
+2025-04-07 16:32:09,047 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:09,048 - DEBUG - [<module>] - Row 3: get_image_url_from_url finished in 0.406s
+2025-04-07 16:32:09,048 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0502/users/f3559cade889ae09f8a6baac1b569ce9599bcef1/i-img800x600-1707176321uuljce240144.jpg
+2025-04-07 16:32:09,119 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.071s. Status: 200
+2025-04-07 16:32:09,167 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.048s
+2025-04-07 16:32:09,168 - DEBUG - [<module>] - Row 3: download_and_prepare_image finished in 0.120s
+2025-04-07 16:32:09,168 - INFO - [<module>] - 行 3: 画像埋込完了 -> D3
+2025-04-07 16:32:09,168 - DEBUG - [<module>] - Row 3: Excel embedding finished in 0.000s
+2025-04-07 16:32:10,176 - DEBUG - [<module>] - Row 3: Post-URL sleep completed in 1.007s
+2025-04-07 16:32:10,177 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/h1179048755
+2025-04-07 16:32:10,488 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.311s
+2025-04-07 16:32:10,547 - INFO - [get_image_url_from_url] - --- URL: https://auctions.yahoo.co.jp/jp/auction/h1179048755 (Final: https://auctions.yahoo.co.jp/jp/auction/h1179048755) --- Response Code: 200
+2025-04-07 16:32:10,547 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://auctions.yahoo.co.jp/jp/auction/h1179048755
+2025-04-07 16:32:10,554 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.006s
+2025-04-07 16:32:10,554 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:10,555 - DEBUG - [<module>] - Row 4: get_image_url_from_url finished in 0.378s
+2025-04-07 16:32:10,555 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
+2025-04-07 16:32:10,637 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.082s. Status: 200
+2025-04-07 16:32:10,705 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.068s
+2025-04-07 16:32:10,706 - DEBUG - [<module>] - Row 4: download_and_prepare_image finished in 0.151s
+2025-04-07 16:32:10,706 - INFO - [<module>] - 行 4: 画像埋込完了 -> D4
+2025-04-07 16:32:10,706 - DEBUG - [<module>] - Row 4: Excel embedding finished in 0.000s
+2025-04-07 16:32:11,712 - DEBUG - [<module>] - Row 4: Post-URL sleep completed in 1.006s
+2025-04-07 16:32:11,713 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist
+2025-04-07 16:32:21,951 - DEBUG - [get_image_url_from_url] - requests.get() completed in 10.237s
+2025-04-07 16:32:22,012 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 399
+2025-04-07 16:32:22,147 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 70924
+2025-04-07 16:32:22,147 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 379
+2025-04-07 16:32:22,147 - DEBUG - [feed] - CP949 Korean prober hit error at byte 379
+2025-04-07 16:32:22,166 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 52754
+2025-04-07 16:32:22,166 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 362
+2025-04-07 16:32:22,191 - DEBUG - [feed] - Johab Korean prober hit error at byte 70923
+2025-04-07 16:32:22,207 - DEBUG - [feed] - windows-1251 confidence = 0.019814656490252554, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,239 - DEBUG - [feed] - ISO-8859-5 confidence = 0.02212267161685421, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,286 - DEBUG - [feed] - IBM855 confidence = 0.04157036664197504, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,334 - DEBUG - [feed] - ISO-8859-5 confidence = 0.026633321617100202, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,350 - DEBUG - [feed] - windows-1251 confidence = 0.03165600488668869, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,414 - DEBUG - [feed] - windows-1255 confidence = 0.027142926778965418, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,430 - DEBUG - [feed] - windows-1255 confidence = 0.025135718748252007, below negative shortcut threshold 0.05
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - utf-8 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - SHIFT_JIS not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - GB2312 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-KR not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - CP949 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - Big5 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-TW not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - Johab not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.11764215919622494
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - MacCyrillic Russian confidence = 0.0
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.28101416390675266
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - IBM855 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - ISO-8859-7 Greek confidence = 0.05028267531375091
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1253 Greek confidence = 0.053187991589748525
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - TIS-620 Thai confidence = 0.1406112787008722
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.2712419908211215
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1255 Hebrew confidence = 0.0
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1255 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - windows-1255 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - utf-8 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - SHIFT_JIS not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - GB2312 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-KR not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - CP949 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - Big5 not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - EUC-TW not active
+2025-04-07 16:32:22,460 - DEBUG - [get_confidence] - Johab not active
+2025-04-07 16:32:22,464 - INFO - [get_image_url_from_url] - --- URL: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist (Final: https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist) --- Response Code: 200
+2025-04-07 16:32:22,464 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.rakuten.co.jp/krdirect/kr-cj4125/?s-id=top_normal_rk_hashist
+2025-04-07 16:32:22,482 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.017s
+2025-04-07 16:32:22,482 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:22,483 - DEBUG - [<module>] - Row 5: get_image_url_from_url finished in 10.770s
+2025-04-07 16:32:22,483 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://shop.r10s.jp/krdirect/cabinet/newpc/cm15j_01_n95_256.jpg
+2025-04-07 16:32:22,574 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.092s. Status: 200
+2025-04-07 16:32:22,611 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.037s
+2025-04-07 16:32:22,612 - DEBUG - [<module>] - Row 5: download_and_prepare_image finished in 0.129s
+2025-04-07 16:32:22,612 - INFO - [<module>] - 行 5: 画像埋込完了 -> D5
+2025-04-07 16:32:22,612 - DEBUG - [<module>] - Row 5: Excel embedding finished in 0.000s
+2025-04-07 16:32:23,616 - DEBUG - [<module>] - Row 5: Post-URL sleep completed in 1.004s
+2025-04-07 16:32:23,616 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/pururunhime/8360_sele/
+2025-04-07 16:32:33,931 - DEBUG - [get_image_url_from_url] - requests.get() completed in 10.314s
+2025-04-07 16:32:33,993 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 368
+2025-04-07 16:32:34,128 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 76216
+2025-04-07 16:32:34,128 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 448
+2025-04-07 16:32:34,129 - DEBUG - [feed] - CP949 Korean prober hit error at byte 448
+2025-04-07 16:32:34,155 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 76212
+2025-04-07 16:32:34,156 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 386
+2025-04-07 16:32:34,182 - DEBUG - [feed] - Johab Korean prober hit error at byte 76215
+2025-04-07 16:32:34,198 - DEBUG - [feed] - windows-1251 confidence = 0.010154100165199017, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,231 - DEBUG - [feed] - ISO-8859-5 confidence = 0.020841256131842324, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,295 - DEBUG - [feed] - ISO-8859-7 confidence = 0.02105552715738306, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,311 - DEBUG - [feed] - windows-1253 confidence = 0.021711126048766644, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,327 - DEBUG - [feed] - ISO-8859-5 confidence = 0.027342634979925857, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,343 - DEBUG - [feed] - windows-1251 confidence = 0.01637459745872058, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,409 - DEBUG - [feed] - windows-1255 confidence = 0.017934562294733787, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,424 - DEBUG - [feed] - windows-1255 confidence = 0.020022980713208186, below negative shortcut threshold 0.05
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - utf-8 not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - SHIFT_JIS not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - GB2312 not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - EUC-KR not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - CP949 not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - Big5 not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - EUC-TW not active
+2025-04-07 16:32:34,454 - DEBUG - [get_confidence] - Johab not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.11086243176150251
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - MacCyrillic Russian confidence = 0.01
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.31425927299031803
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.0517685790118522
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - ISO-8859-7 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1253 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - TIS-620 Thai confidence = 0.11770211382739883
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.28645189496208934
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1255 Hebrew confidence = 0.0
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1255 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - windows-1255 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - utf-8 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - SHIFT_JIS not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - GB2312 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - EUC-KR not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - CP949 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - Big5 not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - EUC-TW not active
+2025-04-07 16:32:34,455 - DEBUG - [get_confidence] - Johab not active
+2025-04-07 16:32:34,455 - INFO - [get_image_url_from_url] - --- URL: https://item.rakuten.co.jp/pururunhime/8360_sele/ (Final: https://item.rakuten.co.jp/pururunhime/8360_sele/) --- Response Code: 200
+2025-04-07 16:32:34,455 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.rakuten.co.jp/pururunhime/8360_sele/
+2025-04-07 16:32:34,469 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.014s
+2025-04-07 16:32:34,469 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:34,470 - DEBUG - [<module>] - Row 6: get_image_url_from_url finished in 10.854s
+2025-04-07 16:32:34,470 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
+2025-04-07 16:32:34,521 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.050s. Status: 200
+2025-04-07 16:32:34,627 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.107s
+2025-04-07 16:32:34,628 - DEBUG - [<module>] - Row 6: download_and_prepare_image finished in 0.158s
+2025-04-07 16:32:34,629 - INFO - [<module>] - 行 6: 画像埋込完了 -> D6
+2025-04-07 16:32:34,629 - DEBUG - [<module>] - Row 6: Excel embedding finished in 0.000s
+2025-04-07 16:32:35,634 - DEBUG - [<module>] - Row 6: Post-URL sleep completed in 1.005s
+2025-04-07 16:32:35,634 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw
+2025-04-07 16:32:37,663 - DEBUG - [get_image_url_from_url] - requests.get() completed in 2.029s
+2025-04-07 16:32:38,165 - INFO - [get_image_url_from_url] - --- URL: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw (Final: https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw) --- Response Code: 200
+2025-04-07 16:32:38,165 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.amazon.co.jp/dp/B09Y1GVNCH/ref=sspa_dk_detail_6?psc=1&pd_rd_i=B09Y1GVNCH&pd_rd_w=Oxal0&content-id=amzn1.sym.f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_p=f293be60-50b7-49bc-95e8-931faf86ed1e&pf_rd_r=6T7TXB0VWBY5B7V4Q5QS&pd_rd_wg=ITp9D&pd_rd_r=b4b15cdd-3145-4c9e-97cb-48feb32d7717&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw
+2025-04-07 16:32:38,225 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.059s
+2025-04-07 16:32:38,235 - INFO - [parse_html_for_image] - Found potential main image via ID (Amazon)
+2025-04-07 16:32:38,236 - DEBUG - [<module>] - Row 7: get_image_url_from_url finished in 2.602s
+2025-04-07 16:32:38,236 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://m.media-amazon.com/images/I/41AdDiZuVBL._SY445_SX342_.jpg
+2025-04-07 16:32:38,293 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.058s. Status: 200
+2025-04-07 16:32:38,298 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.004s
+2025-04-07 16:32:38,298 - DEBUG - [<module>] - Row 7: download_and_prepare_image finished in 0.063s
+2025-04-07 16:32:38,299 - INFO - [<module>] - 行 7: 画像埋込完了 -> D7
+2025-04-07 16:32:38,299 - DEBUG - [<module>] - Row 7: Excel embedding finished in 0.000s
+2025-04-07 16:32:39,305 - DEBUG - [<module>] - Row 7: Post-URL sleep completed in 1.006s
+2025-04-07 16:32:39,306 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1
+2025-04-07 16:32:42,410 - DEBUG - [get_image_url_from_url] - requests.get() completed in 3.103s
+2025-04-07 16:32:42,959 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 82713
+2025-04-07 16:32:43,011 - DEBUG - [feed] - EUC-JP Japanese prober hit error at byte 82529
+2025-04-07 16:32:43,039 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 82561
+2025-04-07 16:32:43,068 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 82529
+2025-04-07 16:32:43,097 - DEBUG - [feed] - CP949 Korean prober hit error at byte 82529
+2025-04-07 16:32:43,125 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 82532
+2025-04-07 16:32:43,153 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 82529
+2025-04-07 16:32:43,181 - DEBUG - [feed] - Johab Korean prober hit error at byte 82529
+2025-04-07 16:32:43,664 - DEBUG - [feed] - ISO-8859-5 confidence = 0.04318722193869631, below negative shortcut threshold 0.05
+2025-04-07 16:32:43,829 - DEBUG - [feed] - MacCyrillic confidence = 0.011933091301776692, below negative shortcut threshold 0.05
+2025-04-07 16:32:44,319 - DEBUG - [feed] - ISO-8859-7 confidence = 0.021942145464980023, below negative shortcut threshold 0.05
+2025-04-07 16:32:44,479 - DEBUG - [feed] - windows-1253 confidence = 0.020183875975840367, below negative shortcut threshold 0.05
+2025-04-07 16:32:44,641 - DEBUG - [feed] - ISO-8859-5 confidence = 0.03434038032026688, below negative shortcut threshold 0.05
+2025-04-07 16:32:44,802 - DEBUG - [feed] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
+2025-04-07 16:32:44,964 - DEBUG - [feed] - TIS-620 confidence = 0.04183819040248424, below negative shortcut threshold 0.05
+2025-04-07 16:32:45,409 - DEBUG - [feed] - windows-1255 confidence = 0.007549310653501182, below negative shortcut threshold 0.05
+2025-04-07 16:32:45,570 - DEBUG - [feed] - windows-1255 confidence = 0.0029527545701194145, below negative shortcut threshold 0.05
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - MacCyrillic not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.14104642343430315
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.1102023571696987
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-7 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - windows-1253 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-5 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - windows-1251 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - TIS-620 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.4650819401674563
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:45,832 - DEBUG - [get_confidence] - ISO-8859-8 not active
+2025-04-07 16:32:45,838 - INFO - [get_image_url_from_url] - --- URL: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1 (Final: https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1) --- Response Code: 200
+2025-04-07 16:32:45,838 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.amazon.co.jp/%E6%AE%BF%E5%A0%82%E5%85%A5%E3%82%8A%E9%87%91%E8%B3%9E%E3%80%91SHURE-%E3%83%8E%E3%82%A4%E3%82%BA%E3%82%AD%E3%83%A3%E3%83%B3%E3%82%BB%E3%83%AA%E3%83%B3%E3%82%B0-%E3%82%B9%E3%83%9A%E3%82%B7%E3%83%A3%E3%83%AB%E3%82%A8%E3%83%87%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%B3-%E3%82%AA%E3%83%BC%E3%83%87%E3%82%A3%E3%82%AA%E3%83%AA%E3%82%B9%E3%83%8B%E3%83%B3%E3%82%B0-%E3%83%A1%E3%83%BC%E3%82%AB%E3%83%BC%E4%BF%9D%E8%A8%BC2%E5%B9%B4%E3%80%91/dp/B00A16BT4E/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_9/356-1470037-9285158?pd_rd_w=48jJl&content-id=amzn1.sym.96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_p=96066f9f-3921-44e5-9ac1-a4b153bf416c&pf_rd_r=4N6M0Q7A217Z0GQ3N6HA&pd_rd_wg=B519H&pd_rd_r=f9d96de0-2867-471e-8fd0-598ee8950973&pd_rd_i=B00A16BT4E&th=1
+2025-04-07 16:32:45,974 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.136s
+2025-04-07 16:32:45,993 - INFO - [parse_html_for_image] - Found potential main image via ID (Amazon)
+2025-04-07 16:32:45,994 - DEBUG - [<module>] - Row 8: get_image_url_from_url finished in 6.688s
+2025-04-07 16:32:45,994 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://m.media-amazon.com/images/I/61djQzEzpxL.__AC_SX300_SY300_QL70_ML2_.jpg
+2025-04-07 16:32:46,065 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.070s. Status: 200
+2025-04-07 16:32:46,067 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.002s
+2025-04-07 16:32:46,068 - DEBUG - [<module>] - Row 8: download_and_prepare_image finished in 0.074s
+2025-04-07 16:32:46,068 - INFO - [<module>] - 行 8: 画像埋込完了 -> D8
+2025-04-07 16:32:46,068 - DEBUG - [<module>] - Row 8: Excel embedding finished in 0.000s
+2025-04-07 16:32:47,072 - DEBUG - [<module>] - Row 8: Post-URL sleep completed in 1.004s
+2025-04-07 16:32:47,073 - INFO - [get_image_url_from_url] - Domain 'www.ebay.com' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
+2025-04-07 16:32:47,073 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
+2025-04-07 16:32:49,010 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 1.938s
+2025-04-07 16:32:49,011 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
+2025-04-07 16:32:49,512 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.501s
+2025-04-07 16:32:49,616 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.104s
+2025-04-07 16:32:49,616 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl)
+2025-04-07 16:32:49,616 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.ebay.com/itm/394414013548?_skw=diamond+%26+pearl&epid=25043363509&itmmeta=01JR316QD5X1T0Q2SCYVZQC9A7&hash=item5bd4e83c6c:g:Cb4AAOSw~N1jvHzk&itmprp=enc%3AAQAKAAAA8FkggFvd1GGDu0w3yXCmi1dQdbxxRMUpxKbVFT1zD4G8JQfkr43R1jTKH%2FDRiZsMHFxqSOMRG9Nhfs3fj9lmR4Q30SuAjSqeJy1JbKS8jI1A8cjD6msNYSreOYo1q9l1pLwU4BVEjL6HOeCi6JXBNuafoDun69uzL0B%2B5ugn2CWwErJOnnR8Tp9cHs6ZuB0uVIuUmXw67jtH4ns6xdPCYxXGCUAT2R5Pw0UVcfNJN9QYJlLHsG%2BN7DuTdP24XFFC0PfIK0GQ8x7vAmAW0gzMiH7I7crAmh03%2BJNxbZ81cUobi6ZBSF9JzNTTQDvUNICZUw%3D%3D%7Ctkp%3ABFBM_Paa4cBl
+2025-04-07 16:32:49,649 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.032s
+2025-04-07 16:32:49,649 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:49,649 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
+2025-04-07 16:32:49,649 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 2.576s
+2025-04-07 16:32:49,649 - DEBUG - [<module>] - Row 9: get_image_url_from_url finished in 2.577s
+2025-04-07 16:32:49,649 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://i.ebayimg.com/images/g/Cb4AAOSw~N1jvHzk/s-l400.jpg
+2025-04-07 16:32:49,713 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.064s. Status: 200
+2025-04-07 16:32:49,723 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.010s
+2025-04-07 16:32:49,724 - DEBUG - [<module>] - Row 9: download_and_prepare_image finished in 0.075s
+2025-04-07 16:32:49,724 - INFO - [<module>] - 行 9: 画像埋込完了 -> D9
+2025-04-07 16:32:49,724 - DEBUG - [<module>] - Row 9: Excel embedding finished in 0.000s
+2025-04-07 16:32:50,730 - DEBUG - [<module>] - Row 9: Post-URL sleep completed in 1.006s
+2025-04-07 16:32:50,730 - INFO - [get_image_url_from_url] - Domain 'jp.mercari.com' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://jp.mercari.com/item/m23341612611
+2025-04-07 16:32:50,730 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://jp.mercari.com/item/m23341612611
+2025-04-07 16:32:52,424 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 1.693s
+2025-04-07 16:32:52,424 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
+2025-04-07 16:32:52,929 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.505s
+2025-04-07 16:32:52,946 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.017s
+2025-04-07 16:32:52,946 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://jp.mercari.com/item/m23341612611)
+2025-04-07 16:32:52,946 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://jp.mercari.com/item/m23341612611
+2025-04-07 16:32:52,960 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.014s
+2025-04-07 16:32:52,960 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:52,960 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
+2025-04-07 16:32:52,960 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 2.230s
+2025-04-07 16:32:52,960 - DEBUG - [<module>] - Row 10: get_image_url_from_url finished in 2.230s
+2025-04-07 16:32:52,960 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://static.mercdn.net/item/detail/orig/photos/m23341612611_1.jpg?1734611979
+2025-04-07 16:32:53,057 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.097s. Status: 200
+2025-04-07 16:32:53,092 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.034s
+2025-04-07 16:32:53,092 - DEBUG - [<module>] - Row 10: download_and_prepare_image finished in 0.132s
+2025-04-07 16:32:53,093 - INFO - [<module>] - 行 10: 画像埋込完了 -> D10
+2025-04-07 16:32:53,093 - DEBUG - [<module>] - Row 10: Excel embedding finished in 0.000s
+2025-04-07 16:32:54,098 - DEBUG - [<module>] - Row 10: Post-URL sleep completed in 1.005s
+2025-04-07 16:32:54,099 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.buyma.com/item/107182714/
+2025-04-07 16:32:54,209 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.110s
+2025-04-07 16:32:54,320 - INFO - [get_image_url_from_url] - --- URL: https://www.buyma.com/item/107182714/ (Final: https://www.buyma.com/item/107182714/) --- Response Code: 200
+2025-04-07 16:32:54,320 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.buyma.com/item/107182714/
+2025-04-07 16:32:54,349 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.029s
+2025-04-07 16:32:54,349 - INFO - [parse_html_for_image] - Found og:image
+2025-04-07 16:32:54,349 - DEBUG - [<module>] - Row 11: get_image_url_from_url finished in 0.251s
+2025-04-07 16:32:54,349 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://cdn-images.buyma.com/imgdata/item/240531/0107182714/623187252/428.jpg
+2025-04-07 16:32:54,413 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.063s. Status: 200
+2025-04-07 16:32:54,420 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.007s
+2025-04-07 16:32:54,421 - DEBUG - [<module>] - Row 11: download_and_prepare_image finished in 0.071s
+2025-04-07 16:32:54,421 - INFO - [<module>] - 行 11: 画像埋込完了 -> D11
+2025-04-07 16:32:54,421 - DEBUG - [<module>] - Row 11: Excel embedding finished in 0.000s
+2025-04-07 16:32:55,424 - DEBUG - [<module>] - Row 11: Post-URL sleep completed in 1.003s
+2025-04-07 16:32:55,426 - DEBUG - [<module>] - Row 12: Skipping empty URL.
+2025-04-07 16:32:55,433 - DEBUG - [<module>] - Row 13: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 14: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 15: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 16: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 17: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 18: Skipping empty URL.
+2025-04-07 16:32:55,434 - DEBUG - [<module>] - Row 19: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 20: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 21: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 22: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 23: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 24: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 25: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 26: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 27: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 28: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 29: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 30: Skipping empty URL.
+2025-04-07 16:32:55,435 - DEBUG - [<module>] - Row 31: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 32: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 33: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 34: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 35: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 36: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 37: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 38: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 39: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 40: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 41: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 42: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 43: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 44: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 45: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 46: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 47: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 48: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 49: Skipping empty URL.
+2025-04-07 16:32:55,436 - DEBUG - [<module>] - Row 50: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 51: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 52: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 53: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 54: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 55: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 56: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 57: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 58: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 59: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 60: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 61: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 62: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 63: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 64: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 65: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 66: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 67: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 68: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 69: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 70: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 71: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 72: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 73: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 74: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 75: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 76: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 77: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 78: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 79: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 80: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 81: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 82: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 83: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 84: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 85: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 86: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 87: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 88: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 89: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 90: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 91: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 92: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 93: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 94: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 95: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 96: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 97: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 98: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 99: Skipping empty URL.
+2025-04-07 16:32:55,437 - DEBUG - [<module>] - Row 100: Skipping empty URL.
+2025-04-07 16:32:55,438 - DEBUG - [<module>] - Row 101: Skipping empty URL.
+2025-04-07 16:32:55,552 - INFO - [__exit__] - WebDriverを終了しました。(0.114s)
+2025-04-07 16:32:55,575 - INFO - [<module>] - Excel file saving completed in 0.024s
+2025-04-07 16:32:55,575 - INFO - [<module>] - ワークブックを閉じました。
