@@ -29,6 +29,10 @@ SELENIUM_ONLY_DOMAINS = [
     "mercari.com",
 ]
 
+# --- 固定する列ヘッダー名 ---
+URL_HEADER_NAME = "URL"
+IMAGE_URL_HEADER_NAME = "(work)画像URL"
+
 # --- WebDriverManager クラス ---
 class WebDriverManager:
     def __init__(self):
@@ -300,9 +304,6 @@ if __name__ == "__main__":
     overall_start_time = time.time()
     parser = argparse.ArgumentParser(description='Excel内のURLから画像を取得 (requests + Selenium 再試行, デフォルト有効・ヘッドレス)')
     parser.add_argument('input_file', help='処理対象Excelファイルパス (.xlsx)')
-    parser.add_argument('-u', '--url_column', default='URL', help='URL列ヘッダー名')
-    parser.add_argument('-i', '--image_url_column', default='(work)画像URL', help='画像URL出力列ヘッダー名')
-    parser.add_argument('-p', '--image_embed_column', default='画像', help='画像埋込列ヘッダー名')
     parser.add_argument('--process_all', action='store_true', help='空URLで処理中断')
     parser.add_argument('--sheet_name', default=0, help='シート名 or インデックス (0始まり)')
     parser.add_argument('--image_width', type=int, default=DEFAULT_IMAGE_WIDTH, help=f'埋込画像幅(px, デフォルト: {DEFAULT_IMAGE_WIDTH})')
@@ -332,6 +333,7 @@ if __name__ == "__main__":
     logging.getLogger("selenium").setLevel(logging.WARNING)
     # --- ログ設定ここまで ---
 
+    # --- Excelファイル処理 ---
     if not os.path.isfile(args.input_file): print(f"エラー: ファイル '{args.input_file}' 未検出"); exit(1)
     if not args.input_file.lower().endswith('.xlsx'): print("エラー: 入力は .xlsx ファイルのみ"); exit(1)
     workbook = None
@@ -344,64 +346,129 @@ if __name__ == "__main__":
         if sheet_name not in workbook.sheetnames: raise ValueError(f"シート名 '{sheet_name}' が見つかりません。")
         sheet = workbook[sheet_name]; print(f"処理シート: '{sheet.title}'")
         header_row_index = 1; headers = {cell.value: cell.column for cell in sheet[header_row_index] if cell.value is not None}
-        required_cols = {args.url_column, args.image_url_column, args.image_embed_column}; missing_cols = required_cols - set(headers.keys())
-        if missing_cols: raise ValueError(f"必須列ヘッダー未検出: {missing_cols}. 利用可能: {list(headers.keys())}")
-        url_col_idx = headers[args.url_column]; img_url_col_idx = headers[args.image_url_column]; img_embed_col_idx = headers[args.image_embed_column]
-        print(f"URL:{get_column_letter(url_col_idx)}, ImgURL:{get_column_letter(img_url_col_idx)}, ImgEmbed:{get_column_letter(img_embed_col_idx)}")
+
+        # --- 列インデックスの取得とチェック (固定ヘッダー名を使用) ---
+        # 固定ヘッダー名がシートに存在するかチェック
+        required_headers = {URL_HEADER_NAME, IMAGE_URL_HEADER_NAME}
+        missing_headers = required_headers - set(headers.keys())
+        if missing_headers:
+            raise ValueError(f"必須列ヘッダー未検出: {missing_headers}. シート上のヘッダー: {list(headers.keys())}")
+
+        # 固定ヘッダー名から列インデックスを取得
+        url_col_idx = headers[URL_HEADER_NAME]
+        img_url_col_idx = headers[IMAGE_URL_HEADER_NAME]
+        # 画像埋め込み列はE列 (列番号5) に固定
+        img_embed_col_idx = 5
+        # ハイフンを入れる列はD列 (列番号4) に固定
+        hyphen_col_idx = 4
+
+        print(f"使用列: URL='{URL_HEADER_NAME}' ({get_column_letter(url_col_idx)}), "
+              f"ImgURL='{IMAGE_URL_HEADER_NAME}' ({get_column_letter(img_url_col_idx)}), "
+              f"ImgEmbed=E, Hyphen=D")
+
+        # --- 処理対象行数のカウント ---
         processed_count = 0; valid_url_found = False; total_rows_to_process = 0
         for row_idx in range(header_row_index + 1, sheet.max_row + 1):
             url_val = sheet.cell(row=row_idx, column=url_col_idx).value;
             if url_val and str(url_val).strip(): total_rows_to_process += 1
         print(f"処理対象のURLを含む行数: {total_rows_to_process}")
 
+        # ★★★ 注意: 既存の画像をすべて削除します ★★★
+        if sheet._images:
+             print("注意: シート上の既存の画像をすべて削除します...")
+             logging.warning("シート上の既存の画像をすべて削除します。")
+             sheet._images = []
+        # ★★★ ここまで追加 ★★★
+
         print("Selenium再試行をデフォルトで有効にします (ヘッドレスモード)。WebDriverを準備します...")
         with WebDriverManager() as driver:
             if driver is None: print("警告: WebDriverの初期化に失敗。Seleniumでの再試行は行われません。")
             row_processed_count = 0
+            # --- メインループ ---
             for row_index in range(header_row_index + 1, sheet.max_row + 1):
-                url_cell = sheet.cell(row=row_index, column=url_col_idx); url = str(url_cell.value).strip() if url_cell.value is not None else ""
-                img_url_cell = sheet.cell(row=row_index, column=img_url_col_idx); img_embed_cell = sheet.cell(row=row_index, column=img_embed_col_idx)
-                img_url_cell.value = None; img_embed_cell.value = None
+                # --- セルオブジェクト取得 ---
+                url_cell = sheet.cell(row=row_index, column=url_col_idx)
+                url = str(url_cell.value).strip() if url_cell.value is not None else ""
+                img_url_cell = sheet.cell(row=row_index, column=img_url_col_idx)
+                img_embed_cell = sheet.cell(row=row_index, column=img_embed_col_idx) # E列
+                hyphen_cell_d = sheet.cell(row=row_index, column=hyphen_col_idx)   # ★ D列のセルを取得
+
+                # --- セルクリア処理 ---
+                img_url_cell.value = None
+                img_url_cell.hyperlink = None # ★ ハイパーリンクもクリア
+                img_embed_cell.value = None
+                hyphen_cell_d.value = None    # ★ D列もクリア
+
+                # --- URLチェック ---
                 if not url:
                     if args.process_all: print(f"\n行 {row_index}: URL空のため中断"); break
                     else: logging.debug(f"Row {row_index}: Skipping empty URL."); continue
                 if not url.lower().startswith(('http://', 'https://')):
                     logging.warning(f"行 {row_index}: 無効URL形式: {url}"); img_url_cell.value = "無効なURL"
+                    # 無効なURLの場合でもD列に印をつけるならここに hyphen_cell_d.value = "無効" など追加可能
                     if args.process_all: print(f"\n行 {row_index}: 無効URLのため中断"); break
                     else: continue
+
+                # --- 有効なURLの場合の処理開始 ---
                 valid_url_found = True; row_processed_count += 1
+
+                # ★★★ D列にハイフンを設定 ★★★
+                hyphen_cell_d.value = "-"
+
+                # --- 処理状況表示 ---
                 print(f"\r処理中: {row_processed_count}/{total_rows_to_process} 件目 ({row_index}行目) - {url[:50]}...", end="", flush=True)
+
+                # --- 画像URL取得 ---
                 t_geturl_start = time.time()
                 image_url, error_message = get_image_url_from_url(url, row_index - 1, driver)
                 logging.debug(f"Row {row_index}: get_image_url_from_url finished in {time.time() - t_geturl_start:.3f}s")
+
+                # --- 画像URL取得結果の処理 ---
                 if image_url:
                     img_url_cell.value = image_url
+                    img_url_cell.hyperlink = image_url
+                    img_url_cell.style = "Hyperlink"
+
+                    # --- 画像ダウンロードと準備 ---
                     t_dlprep_start = time.time(); image_result = download_and_prepare_image(image_url, args.image_width)
                     logging.debug(f"Row {row_index}: download_and_prepare_image finished in {time.time() - t_dlprep_start:.3f}s")
                     if image_result:
+                        # --- 画像埋め込み (E列固定) ---
                         image_data_buffer, img_width, img_height = image_result; t_embed_start = time.time()
                         try:
                             if not image_data_buffer.closed:
                                 img_for_excel = OpenpyxlImage(image_data_buffer); img_for_excel.width = img_width; img_for_excel.height = img_height
                                 required_row_height = img_height * 0.75 + 2
                                 if sheet.row_dimensions[row_index].height is None or sheet.row_dimensions[row_index].height < required_row_height: sheet.row_dimensions[row_index].height = required_row_height
-                                col_letter = get_column_letter(img_embed_col_idx); required_col_width = img_width / 7.0 + 2
+
+                                col_letter = 'E' # 固定
+                                required_col_width = img_width / 7.0 + 2
                                 current_width = sheet.column_dimensions[col_letter].width
                                 if current_width is None or current_width < required_col_width: sheet.column_dimensions[col_letter].width = required_col_width
-                                cell_anchor = f"{col_letter}{row_index}"; img_embed_cell.alignment = Alignment(horizontal='center', vertical='center')
+
+                                cell_anchor = f"E{row_index}" # 固定
+                                img_embed_cell.alignment = Alignment(horizontal='center', vertical='center')
                                 sheet.add_image(img_for_excel, cell_anchor); logging.info(f"行 {row_index}: 画像埋込完了 -> {cell_anchor}")
                             else: logging.error(f"行 {row_index}: BytesIO閉鎖済"); img_embed_cell.value = "内部エラー(Buffer Closed)"
                         except ValueError as ve: logging.error(f"行 {row_index}: 画像埋込ValueError: {ve}", exc_info=True); img_embed_cell.value = f"画像形式エラー? ({ve})"
                         except Exception as e: logging.error(f"行 {row_index}: 画像埋込 予期せぬエラー: {e}", exc_info=True); img_embed_cell.value = "画像埋込エラー"
                         logging.debug(f"Row {row_index}: Excel embedding finished in {time.time() - t_embed_start:.3f}s")
-                    else: logging.warning(f"行 {row_index}: 画像データ準備失敗 URL: {image_url}"); img_embed_cell.value = "画像DL/処理失敗"
+                    else:
+                        # 画像ダウンロード/処理失敗
+                        logging.warning(f"行 {row_index}: 画像データ準備失敗 URL: {image_url}");
+                        img_embed_cell.value = "画像DL/処理失敗"
                 else:
+                    # 画像URL取得失敗
                     img_url_cell.value = error_message if error_message else "取得エラー"
                     logging.error(f"行 {row_index}: 画像URL取得失敗 - {error_message}")
+                    # 画像URL取得失敗でもD列には "-" が入っている
+
+                # --- 処理状況表示と待機 ---
                 current_elapsed_time = time.time() - overall_start_time
                 print(f"\r処理完了: {row_processed_count}/{total_rows_to_process} 件目 ({row_index}行目) - {url[:50]}... (経過時間: {current_elapsed_time:.2f} 秒)          ", flush=True)
                 t_sleep_start = time.time(); time.sleep(args.sleep); logging.debug(f"Row {row_index}: Post-URL sleep completed in {time.time() - t_sleep_start:.3f}s")
-            print()
+            print() # 改行
+
         if not valid_url_found and total_rows_to_process > 0 : print("有効なURL未検出")
         elif row_processed_count > 0:
             overall_elapsed_time = time.time() - overall_start_time
