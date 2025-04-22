@@ -27,6 +27,7 @@ DEBUG_LOG_FILE = "scraping_debug.log"
 SELENIUM_ONLY_DOMAINS = [
     "ebay.com",
     "mercari.com",
+    "2ndstreet.jp",
 ]
 
 # --- 固定する列ヘッダー名 ---
@@ -140,62 +141,155 @@ def parse_html_for_image(html_content: str, base_url: str) -> Optional[str]:
     except Exception as e: logging.error(f"BeautifulSoup parsing failed: {e}", exc_info=True); return None
     domain = urlparse(base_url).netloc.lower() if base_url else ""
 
-    image_url = extract_meta_property(soup, 'og:image')
-    if image_url: logging.info(f"Found og:image"); return convert_to_absolute_path(base_url, image_url)
+    image_url = None # 画像URLを格納する変数を初期化
 
-    image_url = extract_meta_name(soup, 'twitter:image')
-    if image_url: logging.info(f"Found twitter:image"); return convert_to_absolute_path(base_url, image_url)
+    # --- ▼▼▼ 買取王国 専用ロジック ▼▼▼ ---
+    if "okoku.jp" in domain:
+        logging.debug(f"Applying okoku.jp specific logic for {base_url}")
+        product_image_div = soup.find('div', id='product_image')
+        if product_image_div:
+            slider_ul = product_image_div.find('ul', class_='bxslider')
+            if slider_ul:
+                first_li = slider_ul.find('li') # 最初の li 要素を取得
+                if first_li:
+                    img_tag = first_li.find('img')
+                    if img_tag and img_tag.get('src'):
+                        potential_url = img_tag['src']
+                        # noimage.jpg でないことを確認
+                        if "noimage" not in potential_url.lower():
+                            image_url = potential_url
+                            logging.info("Found high-resolution image URL via product_image div (okoku.jp specific)")
+                            # 見つかったら絶対パスに変換して即座に返す
+                            return convert_to_absolute_path(base_url, image_url)
+                        else:
+                            logging.debug("Found img in product_image, but it seems to be a noimage placeholder.")
+                    else:
+                        logging.debug("No img tag found within the first li of bxslider.")
+                else:
+                    logging.debug("No li tag found within bxslider ul.")
+            else:
+                logging.debug("bxslider ul not found within product_image div.")
+        else:
+            logging.debug("product_image div not found.")
+        # 買取王国用ロジックで見つからなかった場合は、下の標準ロジックに進む（念のため）
+        logging.debug("High-resolution image not found via okoku.jp specific logic, proceeding to standard logic.")
+    # --- ▲▲▲ 買取王国 専用ロジック ▲▲▲ ---
 
-    if "mercari.com" in domain:
+    # --- ▼▼▼ ここから 2nd Street 専用ロジック ▼▼▼ ---
+    elif "2ndstreet.jp" in domain:
+        logging.debug(f"Applying 2ndstreet specific logic for {base_url}")
+        goods_images_div = soup.find('div', id='goodsImages')
+        if goods_images_div:
+            # div 内の最初の img タグを探す
+            img_tag = goods_images_div.find('img')
+            if img_tag and img_tag.get('src'):
+                potential_url = img_tag['src']
+                # サムネイル (_mn.jpg や _tn.jpg) でないか確認
+                if not potential_url.endswith(('_mn.jpg', '_tn.jpg')):
+                    image_url = potential_url
+                    logging.info("Found high-resolution image URL via goodsImages ID (2ndstreet specific)")
+                    # 見つかったら絶対パスに変換して返す
+                    return convert_to_absolute_path(base_url, image_url)
+                else:
+                    logging.debug("Found img in goodsImages, but it seems to be a thumbnail.")
+            else:
+                logging.debug("No img tag found within goodsImages div.")
+        else:
+            logging.debug("goodsImages div not found.")
+        # 2nd Street用ロジックで見つからなかった場合は、下の標準ロジックに進む
+        logging.debug("High-resolution image not found via 2ndstreet specific logic, proceeding to standard logic.")
+    # --- ▲▲▲ ここまで 2nd Street 専用ロジック ▲▲▲ ---
+
+    # --- 標準的な画像抽出ロジック (他のサイト、または上記専用ロジックで見つからなかった場合) ---
+    if not image_url: # まだ画像URLが見つかっていない場合
+        image_url = extract_meta_property(soup, 'og:image')
+        # og:image がロゴ画像の場合はスキップする処理を追加（買取王国向け）
+        if image_url and "og_logo.png" in image_url and "okoku.jp" in domain:
+            logging.debug(f"Skipping og:image because it seems to be a logo (okoku.jp): {image_url}")
+            image_url = None # スキップして次のロジックへ
+        elif image_url:
+            logging.info(f"Found og:image")
+
+    if not image_url:
+        image_url = extract_meta_name(soup, 'twitter:image')
+        if image_url: logging.info(f"Found twitter:image")
+
+    # --- Mercari 専用ロジック ---
+    if not image_url and "mercari.com" in domain:
+        logging.debug(f"Applying mercari specific logic for {base_url}")
         next_data_script = soup.find('script', id='__NEXT_DATA__', type='application/json')
         if next_data_script and next_data_script.string:
             try:
                 next_data = json.loads(next_data_script.string)
                 photos = next_data.get('props', {}).get('pageProps', {}).get('item', {}).get('photos', [])
                 if photos and isinstance(photos, list) and len(photos) > 0 and isinstance(photos[0], str):
-                    logging.info(f"Found image URL in __NEXT_DATA__ (Mercari)"); return convert_to_absolute_path(base_url, photos[0])
+                    image_url = photos[0] # ? 以降を除去せずにそのまま使うことが多い
+                    logging.info(f"Found image URL in __NEXT_DATA__ (Mercari)")
             except Exception as e: logging.error(f"Error processing __NEXT_DATA__ JSON: {e}")
 
-        mercari_img_alt = soup.find('img', alt='のサムネイル')
-        if mercari_img_alt and mercari_img_alt.get('src') and 'static.mercdn.net' in mercari_img_alt['src']:
-            img_src = mercari_img_alt['src']; logging.info(f'Found specific img by alt (mercari - fallback)'); return convert_to_absolute_path(base_url, img_src.split("?")[0])
-        mercari_pattern = re.compile(r'https://static\.mercdn\.net/item/detail/orig/photos/[^"\']+?')
-        img_tag_src = soup.find('img', src=mercari_pattern)
-        if img_tag_src: img_src = img_tag_src['src']; logging.info(f"Found specific img src (mercari pattern - fallback)"); return convert_to_absolute_path(base_url, img_src.split("?")[0])
+        # Mercari フォールバックロジック (必要に応じて)
+        if not image_url:
+            mercari_img_alt = soup.find('img', alt='のサムネイル')
+            if mercari_img_alt and mercari_img_alt.get('src') and 'static.mercdn.net' in mercari_img_alt['src']:
+                img_src = mercari_img_alt['src']; logging.info(f'Found specific img by alt (mercari - fallback)'); image_url = img_src.split("?")[0]
 
-    image_url = extract_json_ld_image(soup)
-    if image_url: logging.info(f"Found JSON-LD image"); return convert_to_absolute_path(base_url, image_url)
+        if not image_url:
+            mercari_pattern = re.compile(r'https://static\.mercdn\.net/item/detail/orig/photos/[^"\']+?')
+            img_tag_src = soup.find('img', src=mercari_pattern)
+            if img_tag_src: img_src = img_tag_src['src']; logging.info(f"Found specific img src (mercari pattern - fallback)"); image_url = img_src.split("?")[0]
 
-    if "amazon" in domain:
+    if not image_url:
+        image_url = extract_json_ld_image(soup)
+        if image_url: logging.info(f"Found JSON-LD image")
+
+    # --- Amazon 専用ロジック ---
+    if not image_url and "amazon" in domain:
+        logging.debug(f"Applying amazon specific logic for {base_url}")
         main_image_container = soup.find(id='imgTagWrapperId') or soup.find(id='ivLargeImage') or soup.find(id='landingImage')
         if main_image_container:
             main_img = main_image_container.find('img')
             if main_img and main_img.get('src'):
                 potential_src = main_img['src']
                 if not potential_src.startswith("data:image") and "captcha" not in potential_src.lower():
-                    logging.info(f"Found potential main image via ID (Amazon)"); return convert_to_absolute_path(base_url, potential_src.split("?")[0])
+                    logging.info(f"Found potential main image via ID (Amazon)"); image_url = potential_src.split("?")[0]
 
-    checked_sources = set()
-    image_url = None
-    for img in soup.find_all('img'):
-        potential_src = img.get('src')
-        if not potential_src: continue
-        absolute_src = convert_to_absolute_path(base_url, potential_src)
-        exclude_patterns = [".gif", ".svg", "ads", "icon", "logo", "sprite", "avatar", "spinner", "loading", "pixel", "fls-fe.amazon", "transparent", "spacer", "dummy", "captcha"]
-        exclude_extensions = ['.php', '.aspx', '.jsp']
-        if (absolute_src and
-                absolute_src not in checked_sources and
-                not absolute_src.startswith("data:image") and
-                not any(pat in absolute_src.lower() for pat in exclude_patterns) and
-                not any(absolute_src.lower().endswith(ext) for ext in exclude_extensions) and
-                len(absolute_src) > 10):
-            checked_sources.add(absolute_src)
-            if "/thumb/" not in absolute_src and "favicon" not in absolute_src:
-                logging.info(f"Found generic img src (fallback)")
-                image_url = absolute_src.split("?")[0]
-                break
-    logging.debug(f"parse_html completed in {time.time() - t_start:.3f}s")
-    return image_url
+    # --- 最終的なフォールバック: 一般的な <img> タグ検索 ---
+    if not image_url:
+        logging.debug(f"Applying generic img tag fallback logic for {base_url}")
+        checked_sources = set()
+        fallback_image_url = None # 一時変数を使う
+        for img in soup.find_all('img'):
+            potential_src = img.get('src')
+            if not potential_src: continue
+            # src 属性はまだ絶対パスに変換しない (後でまとめて変換するため)
+            exclude_patterns = [".gif", ".svg", "ads", "icon", "logo", "sprite", "avatar", "spinner", "loading", "pixel", "fls-fe.amazon", "transparent", "spacer", "dummy", "captcha", "_tn.", "_mn."] # サムネイルパターンを追加
+            exclude_extensions = ['.php', '.aspx', '.jsp']
+            src_lower = potential_src.lower()
+            if (potential_src and
+                    potential_src not in checked_sources and # 相対パスでも重複チェック
+                    not src_lower.startswith("data:image") and
+                    not any(pat in src_lower for pat in exclude_patterns) and
+                    not any(src_lower.endswith(ext) for ext in exclude_extensions) and
+                    len(potential_src) > 10):
+                checked_sources.add(potential_src)
+                # ここではまだ絶対パス変換しない。より良い画像が見つかる可能性があるため。
+                # 特定の条件で優先度を高くする (例: width/height属性が大きい、特定のクラス名など)
+                # ここでは単純に最初に見つかったものを採用
+                logging.info(f"Found generic img src (fallback): {potential_src}")
+                fallback_image_url = potential_src.split("?")[0]
+                break # 最初に見つかったものを採用
+        if fallback_image_url:
+            image_url = fallback_image_url
+
+    # --- 最終的なURLの返却 ---
+    if image_url:
+        final_url = convert_to_absolute_path(base_url, image_url)
+        logging.debug(f"parse_html completed in {time.time() - t_start:.3f}s. Returning: {final_url}")
+        return final_url
+    else:
+        logging.warning(f"No suitable image URL found for {base_url}")
+        logging.debug(f"parse_html completed in {time.time() - t_start:.3f}s. Returning None")
+        return None
 
 # Seleniumでの画像URL取得
 def get_image_url_from_url_with_selenium(driver: webdriver.Chrome, url: str) -> Optional[str]:
@@ -267,11 +361,24 @@ def get_image_url_from_url(url: str, row_index_for_debug: int, driver: Optional[
     return final_image_url, error_message
 
 # 画像ダウンロード＆準備関数
-def download_and_prepare_image(image_url: str, target_width: int) -> Optional[Tuple[BytesIO, int, int]]:
+def download_and_prepare_image(image_url: str, target_width: int, referrer_url: Optional[str] = None) -> Optional[Tuple[BytesIO, int, int]]:
     t_dl_start = time.time()
     try:
         logging.debug(f"download_prepare: Starting download for {image_url}")
-        img_response = requests.get(image_url, stream=True, timeout=15); img_response.raise_for_status()
+        # --- ▼▼▼ ここから変更 ▼▼▼ ---
+        # ヘッダーを準備 (元のHEADERSをコピー)
+        img_headers = HEADERS.copy()
+        # referrer_url が指定されていれば、Refererヘッダーを追加
+        if referrer_url:
+            img_headers['Referer'] = referrer_url
+            logging.debug(f"download_prepare: Using Referer: {referrer_url}")
+        else:
+            logging.debug("download_prepare: No Referer specified.")
+
+        # 修正したヘッダーを使ってリクエスト
+        img_response = requests.get(image_url, headers=img_headers, stream=True, timeout=15)
+        img_response.raise_for_status()
+        # --- ▲▲▲ ここまで変更 ▲▲▲ ---
         logging.debug(f"download_prepare: Download completed in {time.time() - t_dl_start:.3f}s. Status: {img_response.status_code}")
         t_proc_start = time.time(); content_type = img_response.headers.get('content-type')
         if not content_type or not content_type.lower().startswith('image/'): logging.warning(f"非画像コンテンツ ({content_type}): {image_url}"); return None
@@ -430,7 +537,10 @@ if __name__ == "__main__":
                     img_url_cell.style = "Hyperlink"
 
                     # --- 画像ダウンロードと準備 ---
-                    t_dlprep_start = time.time(); image_result = download_and_prepare_image(image_url, args.image_width)
+                    # --- ▼▼▼ ここを修正 ▼▼▼ ---
+                    # referrer_url として元のページURL(url)を渡す
+                    t_dlprep_start = time.time(); image_result = download_and_prepare_image(image_url, args.image_width, referrer_url=url)
+                    # --- ▲▲▲ ここまで修正 ▲▲▲ ---
                     logging.debug(f"Row {row_index}: download_and_prepare_image finished in {time.time() - t_dlprep_start:.3f}s")
                     if image_result:
                         # --- 画像埋め込み (E列固定) ---
