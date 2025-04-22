@@ -8,21 +8,23 @@ Excel ファイル内の URL リストからウェブページの主要な画像
 - **既存画像のクリア:** スクリプト実行時に、処理対象シート上の**既存の画像（図形）を全て削除**してから処理を開始します。
 - **処理済みマークとリンク:** 処理対象となった行の**D 列に "-" を自動挿入**し、取得した画像 URL を **"(work)画像 URL" 列にハイパーリンク付きで書き込み**ます。
 - **高度な画像抽出 (優先度の高い順):**
-  1.  **メタタグ:** まず `og:image`, 次に `twitter:image` を探します。
-  2.  **サイト固有ロジック:** 特定サイト向けに最適化された方法を試します（例: Mercari の内部データ構造や特定の属性を持つ画像タグ、Amazon の主要画像コンテナ内の画像）。
-  3.  **構造化データ:** `JSON-LD` (`application/ld+json`) スキーマ内に定義された画像を探します。
-  4.  **汎用フォールバック:** 上記のいずれでも見つからない場合、ページ内の `<img>` タグを走査し、アイコン、広告、小さい画像などを除外しながら、最も主要画像と思われるものを選択します。
-- **ハイブリッド取得戦略:**
+  1.  **サイト固有ロジック (Specific Site Logic):** まず、特定のサイト（**買取王国 `okoku.jp`**, **2nd Street `2ndstreet.jp`** など）向けに最適化された方法（特定の HTML 要素 ID やクラスから抽出）を試みます。
+  2.  **メタタグ (Meta Tags):** 次に `og:image`, `twitter:image` を探します。（買取王国の場合はサイトロゴを除外）
+  3.  **サイト固有データ構造 (Specific Data Structures):** Mercari の内部データ構造 (`__NEXT_DATA__`) などを解析します。
+  4.  **構造化データ (Structured Data):** `JSON-LD` (`application/ld+json`) スキーマ内に定義された画像を探します。
+  5.  **サイト固有 HTML 構造 (Specific HTML Structures):** Amazon の主要画像コンテナ (`#imgTagWrapperId` など) 内の画像を探します。
+  6.  **汎用フォールバック (Generic Fallback):** 上記のいずれでも見つからない場合、ページ内の `<img>` タグを走査し、アイコン、広告、小さい画像、**サムネイル画像 (`_tn.`, `_mn.` など)** を除外しながら、最も主要画像と思われるものを選択します。
+- **ハイブリッド取得戦略 (Hybrid Fetching Strategy):**
   - まず高速な `requests` ライブラリで HTML を取得・解析。
-  - `requests` で失敗した場合や、JavaScript レンダリングが必要な特定ドメイン（`ebay.com`, `mercari.com` など）に対しては、`Selenium` (ヘッドレス Chrome) を使用して動的にページを取得し、再解析。
-- **画像処理と埋め込み:**
-  - 抽出した画像 URL から画像をダウンロード。
+  - `requests` で失敗した場合（例: 403 Forbidden）や、JavaScript レンダリングが必要な特定ドメイン（`SELENIUM_ONLY_DOMAINS` リスト内のドメイン: **`ebay.com`**, **`mercari.com`**, **`2ndstreet.jp`** など）に対しては、`Selenium` (ヘッドレス Chrome) を使用して動的にページを取得し、再解析。
+- **画像処理と埋め込み (Image Processing & Embedding):**
+  - 抽出した画像 URL から画像をダウンロード（**`Referer` ヘッダーを付与**して CDN 等のアクセス制限回避を試行）。
   - `Pillow` を使用して指定された幅にリサイズ（アスペクト比維持）。
   - `openpyxl` を使用して、リサイズされた画像を直接 Excel シートの**E 列のセル**に埋め込み。
   - 画像サイズに合わせて Excel の行の高さ・列の幅を自動調整。
-- **堅牢なエラーハンドリング:** ネットワークエラー、タイムアウト、HTTP エラー、画像処理エラーなどを捕捉し、Excel シートとログに記録。
-- **柔軟な設定:** コマンドライン引数により、シート名、埋め込み画像の幅、リクエスト間の待機時間などを指定可能。（**列名は固定化されたため指定不要**）
-- **デバッグログ:** 詳細な処理状況やエラー情報をファイル (`scraping_debug.log`) に出力可能 (`--debug` オプション)。
+- **堅牢なエラーハンドリング (Robust Error Handling):** ネットワークエラー、タイムアウト、HTTP エラー (4xx, 5xx)、画像処理エラーなどを捕捉し、Excel シートとログに記録。
+- **柔軟な設定 (Flexible Configuration):** コマンドライン引数により、シート名、埋め込み画像の幅、リクエスト間の待機時間などを指定可能。（**列名は固定化されたため指定不要**）
+- **デバッグログ (Debug Logging):** 詳細な処理状況やエラー情報をファイル (`scraping_debug.log`) に出力可能 (`--debug` オプション)。
 
 ## 前提条件 (Requirements)
 
@@ -49,7 +51,7 @@ pip install requests beautifulsoup4 openpyxl Pillow selenium
 ## 使い方 (Usage)
 
 ```bash
-python your_script_name.py <input_excel_file.xlsx> [OPTIONS]
+python scraping.py <input_excel_file.xlsx> [OPTIONS]
 ```
 
 **必須引数:**
@@ -79,13 +81,13 @@ python your_script_name.py <input_excel_file.xlsx> [OPTIONS]
 
 ```bash
 # 基本的な実行 (data.xlsxの最初のシートを処理)
-python excel_image_scraper.py data.xlsx
+python scraping.py data.xlsx
 
 # 画像幅を150px、待機時間を0.5秒に設定
-python excel_image_scraper.py products.xlsx --image_width 150 --sleep 0.5
+python scraping.py products.xlsx --image_width 150 --sleep 0.5
 
 # デバッグログを有効にして実行
-python excel_image_scraper.py input.xlsx --debug
+python scraping.py input.xlsx --debug
 ```
 
 ## 動作詳細 (How it Works)
@@ -95,12 +97,20 @@ python excel_image_scraper.py input.xlsx --debug
 3.  **URL 処理ループ:** 各行の URL セルを読み取ります。
     a. 処理対象の URL が見つかった場合、まず**D 列に "-" を書き込みます**。
     b. **画像 URL 抽出:**
-    i. **Requests 試行:** まず `requests` で URL にアクセスし、HTML コンテンツを取得します。
-    ii. **HTML 解析:** `BeautifulSoup` を用いて HTML を解析し、以下の優先順位で画像 URL を探します: - `og:image` メタタグ - `twitter:image` メタタグ - サイト固有の抽出ロジック (Mercari の `__NEXT_DATA__` など) - `application/ld+json` (JSON-LD) 内の画像情報 - サイト固有の `<img>` タグ属性 (Amazon のコンテナ ID など) - 一般的な `<img>` タグ (ただし、アイコン、広告、極端に小さい画像などは除外)
-    iii. **Selenium フォールバック:** `requests` でのアクセスに失敗した場合、または対象ドメインが `SELENIUM_ONLY_DOMAINS` リストに含まれる場合、`Selenium` (ヘッドレス Chrome) を起動してページを読み込み、動的に生成された HTML ソースを取得して再度 `BeautifulSoup` で解析します。
-    iv. **結果記録:** 見つかった画像 URL を **"(work)画像 URL" 列に、URL 文字列とハイパーリンクの両方** を設定して書き込みます。見つからない場合やエラーが発生した場合は、エラーメッセージを書き込みます。
+    i. **Selenium Only Domain チェック:** URL のドメインが `SELENIUM_ONLY_DOMAINS` リスト（`2ndstreet.jp` などを含む）にあるか確認します。
+    ii. **Requests 試行 (Selenium Only 以外):** リストに含まれない場合、まず `requests` で URL にアクセスし、HTML コンテンツを取得します。
+    iii. **HTML 解析:** `BeautifulSoup` を用いて HTML を解析し、以下の優先順位で画像 URL を探します:
+        - サイト固有の抽出ロジック (**買取王国**, **2nd Street** など)
+        - `og:image` メタタグ (買取王国のロゴは除外)
+        - `twitter:image` メタタグ
+        - サイト固有のデータ構造 (Mercari の `__NEXT_DATA__` など)
+        - `application/ld+json` (JSON-LD) 内の画像情報
+        - サイト固有の `<img>` タグ属性 (Amazon のコンテナ ID など)
+        - 一般的な `<img>` タグ (ただし、アイコン、広告、小さい画像、サムネイルなどは除外)
+    iv. **Selenium 実行:** `requests` でのアクセスに失敗した場合、または対象ドメインが `SELENIUM_ONLY_DOMAINS` リストに含まれる場合、`Selenium` (ヘッドレス Chrome) を起動してページを読み込み、動的に生成された HTML ソースを取得して再度 `BeautifulSoup` で解析します。
+    v. **結果記録:** 見つかった画像 URL を **"(work)画像 URL" 列に、URL 文字列とハイパーリンクの両方** を設定して書き込みます。見つからない場合やエラーが発生した場合は、エラーメッセージを書き込みます。
     c. **画像ダウンロードと埋め込み:**
-    i. 画像 URL が見つかった場合、`requests` で画像をダウンロードします。
+    i. 画像 URL が見つかった場合、`requests` で画像をダウンロードします。この際、**元のページの URL を `Referer` ヘッダーとして付与**します（CDN のアクセス制限回避のため）。
     ii. `Pillow` で画像データを開き、指定された幅にリサイズします (アスペクト比は維持)。適切な画像フォーマット (JPEG, PNG など) に変換します。
     iii. 処理された画像データを `BytesIO` オブジェクトに格納します。
     iv. `openpyxl` を使用して、`BytesIO` オブジェクトから画像を読み込み、**固定の E 列のセル** に埋め込みます。
@@ -111,12 +121,12 @@ python excel_image_scraper.py input.xlsx --debug
 ## ログ (Logging)
 
 - 通常の実行では、処理の開始、終了、主要な警告やエラーがコンソールに出力されます。
-- `--debug` オプションを指定すると、`DEBUG` レベルの詳細なログ（各ステップの実行時間、抽出試行の詳細、Selenium の動作など）が `scraping_debug.log` ファイルに出力されます。これは問題発生時の原因究明に役立ちます。
+- `--debug` オプションを指定すると、`DEBUG` レベルの詳細なログ（各ステップの実行時間、抽出試行の詳細、Selenium の動作、適用されたサイト固有ロジックなど）が `scraping_debug.log` ファイルに出力されます。これは問題発生時の原因究明に役立ちます。
 
 ## 注意点 (Notes / Limitations)
 
-- **ウェブサイトの変更:** ウェブサイトの HTML 構造や JavaScript の実装が変更されると、画像抽出ロジックが正しく機能しなくなる可能性があります。
-- **ボット対策:** CAPTCHA や高度なボット検出システムを持つサイトでは、スクリプトによるアクセスがブロックされたり、画像が取得できない場合があります。
+- **ウェブサイトの変更:** ウェブサイトの HTML 構造や JavaScript の実装が変更されると、画像抽出ロジック（特に**サイト固有のロジック**）が正しく機能しなくなる可能性があります。定期的なメンテナンスが必要です。
+- **ボット対策:** CAPTCHA や高度なボット検出システムを持つサイトでは、スクリプトによるアクセスがブロックされたり、画像が取得できない場合があります。`SELENIUM_ONLY_DOMAINS` リストへの追加や、より高度な対策が必要になる場合があります。
 - **利用規約:** スクレイピング対象のウェブサイトの利用規約を確認し、規約に違反しないように注意してください。過度なアクセスは避け、`--sleep` オプションで適切な待機時間を設定してください。
 - **ChromeDriver のバージョン:**
   - 通常、Selenium Manager が Chrome ブラウザのバージョンに合った ChromeDriver を自動的に準備するため、バージョン不一致の問題は発生しにくいです。
