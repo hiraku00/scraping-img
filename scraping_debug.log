@@ -1,381 +1,423 @@
-2025-04-22 08:44:48,213 - INFO - [<module>] - Excelファイル読み込み完了 (0.023s)
-2025-04-22 08:44:48,213 - WARNING - [<module>] - シート上の既存の画像をすべて削除します。
-2025-04-22 08:44:48,213 - DEBUG - [_default_options] - WebDriver オプション初期化
-2025-04-22 08:44:48,213 - INFO - [__enter__] - WebDriverを初期化しています (ヘッドレスモード)...
-2025-04-22 08:44:49,645 - INFO - [__enter__] - WebDriverの準備が完了しました。(1.431s)
-2025-04-22 08:44:49,645 - INFO - [get_image_url_from_url] - Domain 'jp.mercari.com' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://jp.mercari.com/item/m23341612611
-2025-04-22 08:44:49,645 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://jp.mercari.com/item/m23341612611
-2025-04-22 08:44:51,670 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 2.025s
-2025-04-22 08:44:51,670 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
-2025-04-22 08:44:52,176 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.505s
-2025-04-22 08:44:52,199 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.023s
-2025-04-22 08:44:52,199 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://jp.mercari.com/item/m23341612611)
-2025-04-22 08:44:52,199 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://jp.mercari.com/item/m23341612611
-2025-04-22 08:44:52,214 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.016s
-2025-04-22 08:44:52,215 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:44:52,215 - DEBUG - [parse_html_for_image] - parse_html completed in 0.016s. Returning: https://static.mercdn.net/item/detail/orig/photos/m23341612611_1.jpg?1734611979
-2025-04-22 08:44:52,215 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
-2025-04-22 08:44:52,215 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 2.570s
-2025-04-22 08:44:52,215 - DEBUG - [<module>] - Row 2: get_image_url_from_url finished in 2.570s
-2025-04-22 08:44:52,215 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://static.mercdn.net/item/detail/orig/photos/m23341612611_1.jpg?1734611979
-2025-04-22 08:44:52,215 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://jp.mercari.com/item/m23341612611
-2025-04-22 08:44:52,336 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.122s. Status: 200
-2025-04-22 08:44:52,376 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.040s
-2025-04-22 08:44:52,378 - DEBUG - [<module>] - Row 2: download_and_prepare_image finished in 0.163s
-2025-04-22 08:44:52,378 - INFO - [<module>] - 行 2: 画像埋込完了 -> E2
-2025-04-22 08:44:52,378 - DEBUG - [<module>] - Row 2: Excel embedding finished in 0.000s
-2025-04-22 08:44:53,385 - DEBUG - [<module>] - Row 2: Post-URL sleep completed in 1.007s
-2025-04-22 08:44:53,388 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
-2025-04-22 08:44:53,957 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.569s
-2025-04-22 08:44:54,175 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 256
-2025-04-22 08:44:54,175 - DEBUG - [feed] - EUC-JP Japanese prober hit error at byte 219
-2025-04-22 08:44:54,175 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 233
-2025-04-22 08:44:54,175 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 219
-2025-04-22 08:44:54,176 - DEBUG - [feed] - CP949 Korean prober hit error at byte 219
-2025-04-22 08:44:54,176 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 220
-2025-04-22 08:44:54,176 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 219
-2025-04-22 08:44:54,176 - DEBUG - [feed] - Johab Korean prober hit error at byte 219
-2025-04-22 08:44:54,280 - DEBUG - [feed] - ISO-8859-5 confidence = 0.04147307337921207, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,318 - DEBUG - [feed] - MacCyrillic confidence = 0.012289409412477633, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,425 - DEBUG - [feed] - ISO-8859-7 confidence = 0.010911065487801127, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,459 - DEBUG - [feed] - windows-1253 confidence = 0.010802362187475151, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,494 - DEBUG - [feed] - ISO-8859-5 confidence = 0.02746884304950903, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,528 - DEBUG - [feed] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,563 - DEBUG - [feed] - TIS-620 confidence = 0.03817175334154323, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,662 - DEBUG - [feed] - windows-1255 confidence = 0.007244365516284902, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,697 - DEBUG - [feed] - windows-1255 confidence = 0.004449471412779925, below negative shortcut threshold 0.05
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - MacCyrillic not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11721169991384267
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12403866509957527
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - TIS-620 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.3678597949766691
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1251 Russian confidence = 0.01
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.01
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - MacCyrillic not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.11721169991384267
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.12403866509957527
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - TIS-620 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.3678597949766691
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 Hebrew confidence = 0.0
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-22 08:44:54,755 - DEBUG - [get_confidence] - ISO-8859-8 not active
-2025-04-22 08:44:54,759 - INFO - [get_image_url_from_url] - --- URL: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html (Final: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html) --- Response Code: 200
-2025-04-22 08:44:54,759 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
-2025-04-22 08:44:54,786 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.027s
-2025-04-22 08:44:54,786 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:44:54,787 - DEBUG - [parse_html_for_image] - parse_html completed in 0.027s. Returning: https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
-2025-04-22 08:44:54,787 - DEBUG - [<module>] - Row 3: get_image_url_from_url finished in 1.400s
-2025-04-22 08:44:54,787 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
-2025-04-22 08:44:54,787 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
-2025-04-22 08:44:54,899 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.111s. Status: 200
-2025-04-22 08:44:54,984 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.085s
-2025-04-22 08:44:54,986 - DEBUG - [<module>] - Row 3: download_and_prepare_image finished in 0.198s
-2025-04-22 08:44:54,986 - INFO - [<module>] - 行 3: 画像埋込完了 -> E3
-2025-04-22 08:44:54,986 - DEBUG - [<module>] - Row 3: Excel embedding finished in 0.000s
-2025-04-22 08:44:55,992 - DEBUG - [<module>] - Row 3: Post-URL sleep completed in 1.005s
-2025-04-22 08:44:55,995 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/h1179048755
-2025-04-22 08:44:56,339 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.343s
-2025-04-22 08:44:56,405 - INFO - [get_image_url_from_url] - --- URL: https://auctions.yahoo.co.jp/jp/auction/h1179048755 (Final: https://auctions.yahoo.co.jp/jp/auction/h1179048755) --- Response Code: 200
-2025-04-22 08:44:56,405 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://auctions.yahoo.co.jp/jp/auction/h1179048755
-2025-04-22 08:44:56,411 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.006s
-2025-04-22 08:44:56,411 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:44:56,411 - DEBUG - [parse_html_for_image] - parse_html completed in 0.006s. Returning: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
-2025-04-22 08:44:56,413 - DEBUG - [<module>] - Row 4: get_image_url_from_url finished in 0.419s
-2025-04-22 08:44:56,414 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
-2025-04-22 08:44:56,414 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://auctions.yahoo.co.jp/jp/auction/h1179048755
-2025-04-22 08:44:56,516 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.103s. Status: 200
-2025-04-22 08:44:56,577 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.060s
-2025-04-22 08:44:56,578 - DEBUG - [<module>] - Row 4: download_and_prepare_image finished in 0.164s
-2025-04-22 08:44:56,578 - INFO - [<module>] - 行 4: 画像埋込完了 -> E4
-2025-04-22 08:44:56,578 - DEBUG - [<module>] - Row 4: Excel embedding finished in 0.000s
-2025-04-22 08:44:57,584 - DEBUG - [<module>] - Row 4: Post-URL sleep completed in 1.005s
-2025-04-22 08:44:57,584 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://paypayfleamarket.yahoo.co.jp/item/z431815528
-2025-04-22 08:44:58,462 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.878s
-2025-04-22 08:44:58,696 - INFO - [get_image_url_from_url] - --- URL: https://paypayfleamarket.yahoo.co.jp/item/z431815528 (Final: https://paypayfleamarket.yahoo.co.jp/item/z431815528) --- Response Code: 200
-2025-04-22 08:44:58,696 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://paypayfleamarket.yahoo.co.jp/item/z431815528
-2025-04-22 08:44:58,712 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.016s
-2025-04-22 08:44:58,712 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:44:58,712 - DEBUG - [parse_html_for_image] - parse_html completed in 0.016s. Returning: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0104/users/1c8ef4367957c30a61e13bb6e1e2c99f6ad2998d/i-img1200x1200-1745235864614qvinsn.jpg
-2025-04-22 08:44:58,713 - DEBUG - [<module>] - Row 5: get_image_url_from_url finished in 1.129s
-2025-04-22 08:44:58,713 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0104/users/1c8ef4367957c30a61e13bb6e1e2c99f6ad2998d/i-img1200x1200-1745235864614qvinsn.jpg
-2025-04-22 08:44:58,713 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://paypayfleamarket.yahoo.co.jp/item/z431815528
-2025-04-22 08:44:58,793 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.080s. Status: 200
-2025-04-22 08:44:58,911 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.119s
-2025-04-22 08:44:58,913 - DEBUG - [<module>] - Row 5: download_and_prepare_image finished in 0.200s
-2025-04-22 08:44:58,913 - INFO - [<module>] - 行 5: 画像埋込完了 -> E5
-2025-04-22 08:44:58,914 - DEBUG - [<module>] - Row 5: Excel embedding finished in 0.000s
-2025-04-22 08:44:59,919 - DEBUG - [<module>] - Row 5: Post-URL sleep completed in 1.005s
-2025-04-22 08:44:59,920 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
-2025-04-22 08:45:00,338 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.418s
-2025-04-22 08:45:00,404 - INFO - [get_image_url_from_url] - --- URL: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620 (Final: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620) --- Response Code: 200
-2025-04-22 08:45:00,404 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
-2025-04-22 08:45:00,418 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.014s
-2025-04-22 08:45:00,418 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:45:00,418 - DEBUG - [parse_html_for_image] - parse_html completed in 0.014s. Returning: https://img.fril.jp/img/758980338/l/2563272585.JPG?1745237074
-2025-04-22 08:45:00,419 - DEBUG - [<module>] - Row 6: get_image_url_from_url finished in 0.499s
-2025-04-22 08:45:00,419 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://img.fril.jp/img/758980338/l/2563272585.JPG?1745237074
-2025-04-22 08:45:00,419 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
-2025-04-22 08:45:00,508 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.090s. Status: 200
-2025-04-22 08:45:00,549 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.041s
-2025-04-22 08:45:00,550 - DEBUG - [<module>] - Row 6: download_and_prepare_image finished in 0.132s
-2025-04-22 08:45:00,550 - INFO - [<module>] - 行 6: 画像埋込完了 -> E6
-2025-04-22 08:45:00,550 - DEBUG - [<module>] - Row 6: Excel embedding finished in 0.000s
-2025-04-22 08:45:01,556 - DEBUG - [<module>] - Row 6: Post-URL sleep completed in 1.005s
-2025-04-22 08:45:01,556 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.suruga-ya.jp/product/detail/715011289
-2025-04-22 08:45:02,513 - DEBUG - [get_image_url_from_url] - requests.get() completed in 0.956s
-2025-04-22 08:45:02,573 - INFO - [get_image_url_from_url] - --- URL: https://www.suruga-ya.jp/product/detail/715011289 (Final: https://www.suruga-ya.jp/product/detail/715011289) --- Response Code: 200
-2025-04-22 08:45:02,573 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.suruga-ya.jp/product/detail/715011289
-2025-04-22 08:45:02,628 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.056s
-2025-04-22 08:45:02,629 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:45:02,629 - DEBUG - [parse_html_for_image] - parse_html completed in 0.056s. Returning: https://cdn.suruga-ya.jp/database/pics_light/game/715011289.jpg
-2025-04-22 08:45:02,630 - DEBUG - [<module>] - Row 7: get_image_url_from_url finished in 1.073s
-2025-04-22 08:45:02,630 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://cdn.suruga-ya.jp/database/pics_light/game/715011289.jpg
-2025-04-22 08:45:02,630 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://www.suruga-ya.jp/product/detail/715011289
-2025-04-22 08:45:02,722 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.092s. Status: 200
-2025-04-22 08:45:02,756 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.034s
-2025-04-22 08:45:02,757 - DEBUG - [<module>] - Row 7: download_and_prepare_image finished in 0.128s
-2025-04-22 08:45:02,758 - INFO - [<module>] - 行 7: 画像埋込完了 -> E7
-2025-04-22 08:45:02,758 - DEBUG - [<module>] - Row 7: Excel embedding finished in 0.000s
-2025-04-22 08:45:03,763 - DEBUG - [<module>] - Row 7: Post-URL sleep completed in 1.005s
-2025-04-22 08:45:03,764 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
-2025-04-22 08:45:06,581 - DEBUG - [get_image_url_from_url] - requests.get() completed in 2.817s
-2025-04-22 08:45:07,467 - INFO - [get_image_url_from_url] - --- URL: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934 (Final: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934) --- Response Code: 200
-2025-04-22 08:45:07,467 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
-2025-04-22 08:45:07,619 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.152s
-2025-04-22 08:45:07,636 - DEBUG - [parse_html_for_image] - Applying amazon specific logic for https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
-2025-04-22 08:45:07,638 - INFO - [parse_html_for_image] - Found potential main image via ID (Amazon)
-2025-04-22 08:45:07,638 - DEBUG - [parse_html_for_image] - parse_html completed in 0.171s. Returning: https://m.media-amazon.com/images/I/41hzn43b2jL.__AC_SX300_SY300_QL70_ML2_.jpg
-2025-04-22 08:45:07,639 - DEBUG - [<module>] - Row 8: get_image_url_from_url finished in 3.875s
-2025-04-22 08:45:07,639 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://m.media-amazon.com/images/I/41hzn43b2jL.__AC_SX300_SY300_QL70_ML2_.jpg
-2025-04-22 08:45:07,639 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
-2025-04-22 08:45:07,728 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.089s. Status: 200
-2025-04-22 08:45:07,730 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.002s
-2025-04-22 08:45:07,731 - DEBUG - [<module>] - Row 8: download_and_prepare_image finished in 0.092s
-2025-04-22 08:45:07,731 - INFO - [<module>] - 行 8: 画像埋込完了 -> E8
-2025-04-22 08:45:07,731 - DEBUG - [<module>] - Row 8: Excel embedding finished in 0.000s
-2025-04-22 08:45:08,736 - DEBUG - [<module>] - Row 8: Post-URL sleep completed in 1.004s
-2025-04-22 08:45:08,736 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/pururunhime/8360_sele/
-2025-04-22 08:45:19,003 - DEBUG - [get_image_url_from_url] - requests.get() completed in 10.267s
-2025-04-22 08:45:19,066 - DEBUG - [feed] - SHIFT_JIS Japanese prober hit error at byte 368
-2025-04-22 08:45:19,203 - DEBUG - [feed] - GB2312 Chinese prober hit error at byte 76611
-2025-04-22 08:45:19,203 - DEBUG - [feed] - EUC-KR Korean prober hit error at byte 448
-2025-04-22 08:45:19,203 - DEBUG - [feed] - CP949 Korean prober hit error at byte 448
-2025-04-22 08:45:19,230 - DEBUG - [feed] - Big5 Chinese prober hit error at byte 76607
-2025-04-22 08:45:19,230 - DEBUG - [feed] - EUC-TW Taiwan prober hit error at byte 386
-2025-04-22 08:45:19,257 - DEBUG - [feed] - Johab Korean prober hit error at byte 76610
-2025-04-22 08:45:19,274 - DEBUG - [feed] - windows-1251 confidence = 0.010160864448061191, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,306 - DEBUG - [feed] - ISO-8859-5 confidence = 0.020782517200641594, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,372 - DEBUG - [feed] - ISO-8859-7 confidence = 0.02101996909674573, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,388 - DEBUG - [feed] - windows-1253 confidence = 0.021673120919084986, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,405 - DEBUG - [feed] - ISO-8859-5 confidence = 0.02726464854802756, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,421 - DEBUG - [feed] - windows-1251 confidence = 0.016383725846475204, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,533 - DEBUG - [feed] - windows-1255 confidence = 0.017928660587423758, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,549 - DEBUG - [feed] - windows-1255 confidence = 0.020016391772273823, below negative shortcut threshold 0.05
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - GB2312 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - CP949 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - Big5 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - Johab not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - KOI8-R Russian confidence = 0.11093260509764741
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - MacCyrillic Russian confidence = 0.01
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - IBM866 Russian confidence = 0.3142239593860739
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - IBM855 Russian confidence = 0.052211133342246696
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - ISO-8859-7 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1253 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - ISO-8859-5 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1251 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - TIS-620 Thai confidence = 0.1180878000592259
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - ISO-8859-9 Turkish confidence = 0.28802545985034
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1255 Hebrew confidence = 0.0
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - windows-1255 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - utf-8 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - SHIFT_JIS not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-JP Japanese confidence = 0.99
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - GB2312 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-KR not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - CP949 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - Big5 not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - EUC-TW not active
-2025-04-22 08:45:19,580 - DEBUG - [get_confidence] - Johab not active
-2025-04-22 08:45:19,632 - INFO - [get_image_url_from_url] - --- URL: https://item.rakuten.co.jp/pururunhime/8360_sele/ (Final: https://item.rakuten.co.jp/pururunhime/8360_sele/) --- Response Code: 200
-2025-04-22 08:45:19,632 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://item.rakuten.co.jp/pururunhime/8360_sele/
-2025-04-22 08:45:19,647 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.015s
-2025-04-22 08:45:19,647 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:45:19,647 - DEBUG - [parse_html_for_image] - parse_html completed in 0.015s. Returning: https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
-2025-04-22 08:45:19,648 - DEBUG - [<module>] - Row 9: get_image_url_from_url finished in 10.912s
-2025-04-22 08:45:19,648 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
-2025-04-22 08:45:19,648 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://item.rakuten.co.jp/pururunhime/8360_sele/
-2025-04-22 08:45:19,741 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.093s. Status: 200
-2025-04-22 08:45:19,820 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.079s
-2025-04-22 08:45:19,821 - DEBUG - [<module>] - Row 9: download_and_prepare_image finished in 0.172s
-2025-04-22 08:45:19,821 - INFO - [<module>] - 行 9: 画像埋込完了 -> E9
-2025-04-22 08:45:19,821 - DEBUG - [<module>] - Row 9: Excel embedding finished in 0.000s
-2025-04-22 08:45:20,826 - DEBUG - [<module>] - Row 9: Post-URL sleep completed in 1.005s
-2025-04-22 08:45:20,826 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://netmall.hardoff.co.jp/product/3413159/
-2025-04-22 08:45:23,208 - DEBUG - [get_image_url_from_url] - requests.get() completed in 2.381s
-2025-04-22 08:45:23,274 - INFO - [get_image_url_from_url] - --- URL: https://netmall.hardoff.co.jp/product/3413159/ (Final: https://netmall.hardoff.co.jp/product/3413159/) --- Response Code: 200
-2025-04-22 08:45:23,275 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://netmall.hardoff.co.jp/product/3413159/
-2025-04-22 08:45:23,295 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.021s
-2025-04-22 08:45:23,296 - INFO - [parse_html_for_image] - Found og:image
-2025-04-22 08:45:23,296 - DEBUG - [parse_html_for_image] - parse_html completed in 0.021s. Returning: https://p1-d9ebd2ee.imageflux.jp/c!/w=1280,h=1280,a=0,u=1,q=75/201144/IMG_1683882157423.jpg
-2025-04-22 08:45:23,296 - DEBUG - [<module>] - Row 10: get_image_url_from_url finished in 2.470s
-2025-04-22 08:45:23,296 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://p1-d9ebd2ee.imageflux.jp/c!/w=1280,h=1280,a=0,u=1,q=75/201144/IMG_1683882157423.jpg
-2025-04-22 08:45:23,296 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://netmall.hardoff.co.jp/product/3413159/
-2025-04-22 08:45:23,427 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.130s. Status: 200
-2025-04-22 08:45:23,474 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.047s
-2025-04-22 08:45:23,475 - DEBUG - [<module>] - Row 10: download_and_prepare_image finished in 0.179s
-2025-04-22 08:45:23,476 - INFO - [<module>] - 行 10: 画像埋込完了 -> E10
-2025-04-22 08:45:23,476 - DEBUG - [<module>] - Row 10: Excel embedding finished in 0.000s
-2025-04-22 08:45:24,482 - DEBUG - [<module>] - Row 10: Post-URL sleep completed in 1.006s
-2025-04-22 08:45:24,483 - INFO - [get_image_url_from_url] - Domain 'www.2ndstreet.jp' is in SELENIUM_ONLY_DOMAINS. Using Selenium directly for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
-2025-04-22 08:45:24,483 - INFO - [get_image_url_from_url_with_selenium] - Attempting to fetch URL with Selenium: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
-2025-04-22 08:45:33,946 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.get() completed in 9.462s
-2025-04-22 08:45:33,946 - INFO - [get_image_url_from_url_with_selenium] - Waiting for 0.5 seconds...
-2025-04-22 08:45:34,451 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium time.sleep() completed in 0.505s
-2025-04-22 08:45:34,550 - DEBUG - [get_image_url_from_url_with_selenium] - Selenium driver.page_source completed in 0.098s
-2025-04-22 08:45:34,550 - INFO - [get_image_url_from_url_with_selenium] - Successfully fetched page source with Selenium (final URL: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397)
-2025-04-22 08:45:34,550 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
-2025-04-22 08:45:34,655 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.105s
-2025-04-22 08:45:34,655 - DEBUG - [parse_html_for_image] - Applying 2ndstreet specific logic for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
-2025-04-22 08:45:34,658 - INFO - [parse_html_for_image] - Found high-resolution image URL via goodsImages ID (2ndstreet specific)
-2025-04-22 08:45:34,658 - INFO - [get_image_url_from_url_with_selenium] - Found image URL using Selenium.
-2025-04-22 08:45:34,658 - DEBUG - [get_image_url_from_url] - get_image_url_from_url_with_selenium (Direct) completed in 10.175s
-2025-04-22 08:45:34,658 - DEBUG - [<module>] - Row 11: get_image_url_from_url finished in 10.176s
-2025-04-22 08:45:34,658 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://cdn2.2ndstreet.jp/img/pc/goods/224130/01/04571/1.jpg
-2025-04-22 08:45:34,658 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
-2025-04-22 08:45:34,767 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.109s. Status: 200
-2025-04-22 08:45:34,794 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.027s
-2025-04-22 08:45:34,795 - DEBUG - [<module>] - Row 11: download_and_prepare_image finished in 0.137s
-2025-04-22 08:45:34,795 - INFO - [<module>] - 行 11: 画像埋込完了 -> E11
-2025-04-22 08:45:34,795 - DEBUG - [<module>] - Row 11: Excel embedding finished in 0.000s
-2025-04-22 08:45:35,800 - DEBUG - [<module>] - Row 11: Post-URL sleep completed in 1.005s
-2025-04-22 08:45:35,801 - INFO - [get_image_url_from_url] - Attempting to fetch URL with requests: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
-2025-04-22 08:45:37,071 - DEBUG - [get_image_url_from_url] - requests.get() completed in 1.270s
-2025-04-22 08:45:37,142 - INFO - [get_image_url_from_url] - --- URL: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2 (Final: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2) --- Response Code: 200
-2025-04-22 08:45:37,142 - DEBUG - [parse_html_for_image] - parse_html: Start parsing for https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
-2025-04-22 08:45:37,167 - DEBUG - [parse_html_for_image] - BeautifulSoup parsing completed in 0.025s
-2025-04-22 08:45:37,167 - DEBUG - [parse_html_for_image] - Applying okoku.jp specific logic for https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
-2025-04-22 08:45:37,168 - INFO - [parse_html_for_image] - Found high-resolution image URL via product_image div (okoku.jp specific)
-2025-04-22 08:45:37,169 - DEBUG - [<module>] - Row 12: get_image_url_from_url finished in 1.369s
-2025-04-22 08:45:37,169 - DEBUG - [download_and_prepare_image] - download_prepare: Starting download for https://www.okoku.jp/ec/img/616/2200003264616/2200003264616_m.jpg
-2025-04-22 08:45:37,169 - DEBUG - [download_and_prepare_image] - download_prepare: Using Referer: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
-2025-04-22 08:45:37,304 - DEBUG - [download_and_prepare_image] - download_prepare: Download completed in 0.135s. Status: 200
-2025-04-22 08:45:37,344 - DEBUG - [download_and_prepare_image] - download_prepare: Image processing completed in 0.040s
-2025-04-22 08:45:37,345 - DEBUG - [<module>] - Row 12: download_and_prepare_image finished in 0.175s
-2025-04-22 08:45:37,345 - INFO - [<module>] - 行 12: 画像埋込完了 -> E12
-2025-04-22 08:45:37,345 - DEBUG - [<module>] - Row 12: Excel embedding finished in 0.000s
-2025-04-22 08:45:38,350 - DEBUG - [<module>] - Row 12: Post-URL sleep completed in 1.005s
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 13: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 14: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 15: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 16: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 17: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 18: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 19: Skipping empty URL.
-2025-04-22 08:45:38,351 - DEBUG - [<module>] - Row 20: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 21: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 22: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 23: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 24: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 25: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 26: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 27: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 28: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 29: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 30: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 31: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 32: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 33: Skipping empty URL.
-2025-04-22 08:45:38,352 - DEBUG - [<module>] - Row 34: Skipping empty URL.
-2025-04-22 08:45:38,353 - DEBUG - [<module>] - Row 35: Skipping empty URL.
-2025-04-22 08:45:38,353 - DEBUG - [<module>] - Row 36: Skipping empty URL.
-2025-04-22 08:45:38,353 - DEBUG - [<module>] - Row 37: Skipping empty URL.
-2025-04-22 08:45:38,353 - DEBUG - [<module>] - Row 38: Skipping empty URL.
-2025-04-22 08:45:38,353 - DEBUG - [<module>] - Row 39: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 40: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 41: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 42: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 43: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 44: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 45: Skipping empty URL.
-2025-04-22 08:45:38,354 - DEBUG - [<module>] - Row 46: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 47: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 48: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 49: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 50: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 51: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 52: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 53: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 54: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 55: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 56: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 57: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 58: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 59: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 60: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 61: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 62: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 63: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 64: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 65: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 66: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 67: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 68: Skipping empty URL.
-2025-04-22 08:45:38,355 - DEBUG - [<module>] - Row 69: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 70: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 71: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 72: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 73: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 74: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 75: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 76: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 77: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 78: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 79: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 80: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 81: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 82: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 83: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 84: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 85: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 86: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 87: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 88: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 89: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 90: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 91: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 92: Skipping empty URL.
-2025-04-22 08:45:38,356 - DEBUG - [<module>] - Row 93: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 94: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 95: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 96: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 97: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 98: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 99: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 100: Skipping empty URL.
-2025-04-22 08:45:38,357 - DEBUG - [<module>] - Row 101: Skipping empty URL.
-2025-04-22 08:45:38,543 - INFO - [__exit__] - WebDriverを終了しました。(0.186s)
-2025-04-22 08:45:38,601 - INFO - [<module>] - Excel file saving completed in 0.056s
-2025-04-22 08:45:38,601 - INFO - [<module>] - ワークブックを閉じました。
+2025-04-27 10:42:43,423 - INFO - [main:998] - Script execution started.
+2025-04-27 10:42:43,423 - INFO - [main:999] - Arguments: Namespace(input_file='画像取得.xlsx', sheet=0, width=100, sleep=1.0, process_all=False, skip_selenium=False, debug=True)
+2025-04-27 10:42:43,450 - INFO - [load_workbook_and_sheet:677] - Excel file loaded in 0.026s
+2025-04-27 10:42:43,450 - DEBUG - [get_column_indices:714] - Found headers: {'URL': 2, '(work)画像URL': 3, '画像': 5}
+2025-04-27 10:42:43,450 - INFO - [clear_previous_results:733] - Clearing previous results (Image URL, Embedded Image, Hyphen)...
+2025-04-27 10:42:43,451 - WARNING - [clear_previous_results:755] - Removing all existing images from the sheet.
+2025-04-27 10:42:43,451 - INFO - [clear_previous_results:757] - Previous results cleared.
+2025-04-27 10:42:43,451 - DEBUG - [_default_options:56] - WebDriver オプション初期化
+2025-04-27 10:42:43,451 - INFO - [__enter__:72] - WebDriverを初期化しています (ヘッドレスモード)...
+2025-04-27 10:42:44,231 - INFO - [__enter__:79] - WebDriverの準備が完了しました。(0.780s)
+2025-04-27 10:42:44,232 - INFO - [process_excel_rows:817] - --- Processing Row 2, URL: https://jp.mercari.com/item/m23341612611 ---
+2025-04-27 10:42:44,232 - INFO - [get_image_url_from_url:577] - Domain 'jp.mercari.com' requires Selenium. Using Selenium directly for https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:44,232 - INFO - [_get_image_url_with_selenium:519] - Attempting to fetch URL with Selenium: https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:46,204 - DEBUG - [_get_image_url_with_selenium:524] - Selenium driver.get() completed in 1.973s
+2025-04-27 10:42:46,204 - DEBUG - [_get_image_url_with_selenium:530] - Waiting 0.5s for dynamic content...
+2025-04-27 10:42:46,710 - DEBUG - [_get_image_url_with_selenium:531] - Selenium wait completed in 0.505s
+2025-04-27 10:42:46,724 - DEBUG - [_get_image_url_with_selenium:536] - Selenium driver.page_source retrieved in 0.014s
+2025-04-27 10:42:46,724 - INFO - [_get_image_url_with_selenium:537] - Successfully fetched page source with Selenium (Final URL: https://jp.mercari.com/item/m23341612611)
+2025-04-27 10:42:46,724 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:46,730 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.006s
+2025-04-27 10:42:46,730 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: jp.mercari.com
+2025-04-27 10:42:46,731 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:46,732 - DEBUG - [parse_html_for_image:493] - Trying JSON-LD extraction
+2025-04-27 10:42:46,732 - DEBUG - [parse_html_for_image:498] - Trying fallback image extraction from <img> tags
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:398] - Applying generic img tag fallback logic.
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:443] - Fallback candidate: https://www.facebook.com/tr?id=3765626403484289&ev=PageView&... (Size: 0, Alt: 0)
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:443] - Fallback candidate: https://ct.pinterest.com/v3/?event=init&tid=2614327216568&pd... (Size: 0, Alt: 0)
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:443] - Fallback candidate: https://bat.bing.com/action/0?ti=27031631&tm=gtm002&Ver=2&mi... (Size: 0, Alt: 0)
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:443] - Fallback candidate: https://bat.bing.com/action/0?ti=27031631&tm=gtm002&Ver=2&mi... (Size: 0, Alt: 0)
+2025-04-27 10:42:46,732 - DEBUG - [_extract_fallback_image:443] - Fallback candidate: https://a.imgvc.com/i/bf.png?v=1... (Size: 0, Alt: 0)
+2025-04-27 10:42:46,732 - INFO - [_extract_fallback_image:453] - Selected fallback image: https://www.facebook.com/tr?id=3765626403484289&ev=PageView&...
+2025-04-27 10:42:46,732 - INFO - [parse_html_for_image:504] - Found image URL: https://www.facebook.com/tr
+2025-04-27 10:42:46,732 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.008s
+2025-04-27 10:42:46,732 - INFO - [_get_image_url_with_selenium:543] - Found image URL using Selenium for https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:46,732 - INFO - [get_image_url_from_url:586] - URL processing (Selenium Direct) took 2.501s for https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:46,732 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://www.facebook.com/tr
+2025-04-27 10:42:46,732 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://jp.mercari.com/item/m23341612611
+2025-04-27 10:42:47,002 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.270s. Status: 200
+2025-04-27 10:42:47,003 - WARNING - [download_and_prepare_image:208] - Non-image content type (text/plain) for URL: https://www.facebook.com/tr
+2025-04-27 10:42:47,004 - WARNING - [process_excel_rows:887] - Row 2: Failed to download or prepare image from URL: https://www.facebook.com/tr
+2025-04-27 10:42:47,004 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:48,004 - INFO - [process_excel_rows:817] - --- Processing Row 3, URL: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html ---
+2025-04-27 10:42:48,006 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
+2025-04-27 10:42:48,558 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.552s
+2025-04-27 10:42:48,779 - DEBUG - [feed:65] - SHIFT_JIS Japanese prober hit error at byte 256
+2025-04-27 10:42:48,780 - DEBUG - [feed:66] - EUC-JP Japanese prober hit error at byte 219
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - GB2312 Chinese prober hit error at byte 233
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - EUC-KR Korean prober hit error at byte 219
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - CP949 Korean prober hit error at byte 219
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - Big5 Chinese prober hit error at byte 220
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - EUC-TW Taiwan prober hit error at byte 219
+2025-04-27 10:42:48,780 - DEBUG - [feed:64] - Johab Korean prober hit error at byte 219
+2025-04-27 10:42:48,884 - DEBUG - [feed:134] - ISO-8859-5 confidence = 0.0412719913895186, below negative shortcut threshold 0.05
+2025-04-27 10:42:48,921 - DEBUG - [feed:134] - MacCyrillic confidence = 0.012377434032925945, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,029 - DEBUG - [feed:134] - ISO-8859-7 confidence = 0.010832327811458702, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,063 - DEBUG - [feed:134] - windows-1253 confidence = 0.010699707102938112, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,098 - DEBUG - [feed:134] - ISO-8859-5 confidence = 0.027341564868884106, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,132 - DEBUG - [feed:134] - windows-1251 confidence = 0.0, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,168 - DEBUG - [feed:134] - TIS-620 confidence = 0.038843068410884224, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,265 - DEBUG - [feed:134] - windows-1255 confidence = 0.007275766475268621, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,300 - DEBUG - [feed:134] - windows-1255 confidence = 0.004458625187588392, below negative shortcut threshold 0.05
+2025-04-27 10:42:49,358 - DEBUG - [get_confidence:98] - windows-1251 Russian confidence = 0.01
+2025-04-27 10:42:49,358 - DEBUG - [get_confidence:98] - KOI8-R Russian confidence = 0.01
+2025-04-27 10:42:49,358 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - MacCyrillic not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - IBM866 Russian confidence = 0.11709599536655457
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - IBM855 Russian confidence = 0.12400220077986532
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-7 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - windows-1253 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - windows-1251 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - TIS-620 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - ISO-8859-9 Turkish confidence = 0.36788960056477416
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - ISO-8859-8 Hebrew confidence = 0.0
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-8 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-8 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - windows-1251 Russian confidence = 0.01
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - KOI8-R Russian confidence = 0.01
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - MacCyrillic not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - IBM866 Russian confidence = 0.11709599536655457
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - IBM855 Russian confidence = 0.12400220077986532
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-7 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - windows-1253 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - windows-1251 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - TIS-620 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - ISO-8859-9 Turkish confidence = 0.36788960056477416
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:98] - ISO-8859-8 Hebrew confidence = 0.0
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-8 not active
+2025-04-27 10:42:49,359 - DEBUG - [get_confidence:95] - ISO-8859-8 not active
+2025-04-27 10:42:49,362 - INFO - [get_image_url_from_url:607] - Requests success for https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html (Final: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html) - Status: 200
+2025-04-27 10:42:49,362 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
+2025-04-27 10:42:49,391 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.028s
+2025-04-27 10:42:49,391 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: store.shopping.yahoo.co.jp
+2025-04-27 10:42:49,391 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:49,391 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_...
+2025-04-27 10:42:49,391 - INFO - [parse_html_for_image:504] - Found image URL: https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
+2025-04-27 10:42:49,391 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.029s
+2025-04-27 10:42:49,391 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 1.385s for https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html. Result: Found
+2025-04-27 10:42:49,392 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://item-shopping.c.yimg.jp/i/n/freelife_rgt-h02-200250_i_20241021100126
+2025-04-27 10:42:49,392 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://store.shopping.yahoo.co.jp/freelife/rgt-h02-200250.html
+2025-04-27 10:42:49,756 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.364s. Status: 200
+2025-04-27 10:42:49,999 - DEBUG - [download_and_prepare_image:237] - Resizing image from 900x900 to 100x100
+2025-04-27 10:42:50,022 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.023s
+2025-04-27 10:42:50,024 - DEBUG - [process_excel_rows:864] - Row 3: Set column E width to 20.29
+2025-04-27 10:42:50,024 - INFO - [process_excel_rows:873] - Row 3: Image successfully embedded into cell E3
+2025-04-27 10:42:50,024 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:51,030 - INFO - [process_excel_rows:817] - --- Processing Row 4, URL: https://auctions.yahoo.co.jp/jp/auction/h1179048755 ---
+2025-04-27 10:42:51,032 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://auctions.yahoo.co.jp/jp/auction/h1179048755
+2025-04-27 10:42:51,398 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.366s
+2025-04-27 10:42:51,462 - INFO - [get_image_url_from_url:607] - Requests success for https://auctions.yahoo.co.jp/jp/auction/h1179048755 (Final: https://auctions.yahoo.co.jp/jp/auction/h1179048755) - Status: 200
+2025-04-27 10:42:51,462 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://auctions.yahoo.co.jp/jp/auction/h1179048755
+2025-04-27 10:42:51,467 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.005s
+2025-04-27 10:42:51,467 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: auctions.yahoo.co.jp
+2025-04-27 10:42:51,467 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:51,467 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image...
+2025-04-27 10:42:51,467 - INFO - [parse_html_for_image:504] - Found image URL: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
+2025-04-27 10:42:51,467 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.006s
+2025-04-27 10:42:51,467 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 0.436s for https://auctions.yahoo.co.jp/jp/auction/h1179048755. Result: Found
+2025-04-27 10:42:51,468 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0103/user/0fc117f55280a5135fc44a2ec7f2bbd100ec825370a806ab34c4072bca65f05c/i-img1200x900-17433241911174tuymte40540.jpg
+2025-04-27 10:42:51,468 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://auctions.yahoo.co.jp/jp/auction/h1179048755
+2025-04-27 10:42:51,563 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.095s. Status: 200
+2025-04-27 10:42:51,631 - DEBUG - [download_and_prepare_image:237] - Resizing image from 1200x900 to 100x75
+2025-04-27 10:42:51,653 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.022s
+2025-04-27 10:42:51,654 - INFO - [process_excel_rows:873] - Row 4: Image successfully embedded into cell E4
+2025-04-27 10:42:51,655 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:52,660 - INFO - [process_excel_rows:817] - --- Processing Row 5, URL: https://paypayfleamarket.yahoo.co.jp/item/z431815528 ---
+2025-04-27 10:42:52,660 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://paypayfleamarket.yahoo.co.jp/item/z431815528
+2025-04-27 10:42:53,355 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.695s
+2025-04-27 10:42:53,577 - INFO - [get_image_url_from_url:607] - Requests success for https://paypayfleamarket.yahoo.co.jp/item/z431815528 (Final: https://paypayfleamarket.yahoo.co.jp/item/z431815528) - Status: 200
+2025-04-27 10:42:53,578 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://paypayfleamarket.yahoo.co.jp/item/z431815528
+2025-04-27 10:42:53,593 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.015s
+2025-04-27 10:42:53,593 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: paypayfleamarket.yahoo.co.jp
+2025-04-27 10:42:53,593 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:53,593 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image...
+2025-04-27 10:42:53,593 - INFO - [parse_html_for_image:504] - Found image URL: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0104/users/1c8ef4367957c30a61e13bb6e1e2c99f6ad2998d/i-img1200x1200-1745235864614qvinsn.jpg
+2025-04-27 10:42:53,593 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.016s
+2025-04-27 10:42:53,593 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 0.933s for https://paypayfleamarket.yahoo.co.jp/item/z431815528. Result: Found
+2025-04-27 10:42:53,594 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0104/users/1c8ef4367957c30a61e13bb6e1e2c99f6ad2998d/i-img1200x1200-1745235864614qvinsn.jpg
+2025-04-27 10:42:53,594 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://paypayfleamarket.yahoo.co.jp/item/z431815528
+2025-04-27 10:42:53,669 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.074s. Status: 200
+2025-04-27 10:42:53,777 - DEBUG - [download_and_prepare_image:237] - Resizing image from 1200x1200 to 100x100
+2025-04-27 10:42:53,807 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.030s
+2025-04-27 10:42:53,809 - INFO - [process_excel_rows:873] - Row 5: Image successfully embedded into cell E5
+2025-04-27 10:42:53,809 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:54,810 - INFO - [process_excel_rows:817] - --- Processing Row 6, URL: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620 ---
+2025-04-27 10:42:54,810 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
+2025-04-27 10:42:55,211 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.401s
+2025-04-27 10:42:55,288 - INFO - [get_image_url_from_url:607] - Requests success for https://item.fril.jp/bfef2f623b11bc571d302d94aacce620 (Final: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620) - Status: 200
+2025-04-27 10:42:55,289 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
+2025-04-27 10:42:55,302 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.014s
+2025-04-27 10:42:55,302 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: item.fril.jp
+2025-04-27 10:42:55,302 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:55,302 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://img.fril.jp/img/758980338/l/2563272585.JPG?174523707...
+2025-04-27 10:42:55,302 - INFO - [parse_html_for_image:504] - Found image URL: https://img.fril.jp/img/758980338/l/2563272585.JPG?1745237074
+2025-04-27 10:42:55,302 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.014s
+2025-04-27 10:42:55,302 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 0.492s for https://item.fril.jp/bfef2f623b11bc571d302d94aacce620. Result: Found
+2025-04-27 10:42:55,303 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://img.fril.jp/img/758980338/l/2563272585.JPG?1745237074
+2025-04-27 10:42:55,303 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://item.fril.jp/bfef2f623b11bc571d302d94aacce620
+2025-04-27 10:42:55,379 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.076s. Status: 200
+2025-04-27 10:42:55,410 - DEBUG - [download_and_prepare_image:237] - Resizing image from 1080x1080 to 100x100
+2025-04-27 10:42:55,429 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.019s
+2025-04-27 10:42:55,430 - INFO - [process_excel_rows:873] - Row 6: Image successfully embedded into cell E6
+2025-04-27 10:42:55,430 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:56,437 - INFO - [process_excel_rows:817] - --- Processing Row 7, URL: https://www.suruga-ya.jp/product/detail/715011289 ---
+2025-04-27 10:42:56,438 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://www.suruga-ya.jp/product/detail/715011289
+2025-04-27 10:42:57,154 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.716s
+2025-04-27 10:42:57,224 - INFO - [get_image_url_from_url:607] - Requests success for https://www.suruga-ya.jp/product/detail/715011289 (Final: https://www.suruga-ya.jp/product/detail/715011289) - Status: 200
+2025-04-27 10:42:57,224 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://www.suruga-ya.jp/product/detail/715011289
+2025-04-27 10:42:57,238 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.014s
+2025-04-27 10:42:57,238 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: www.suruga-ya.jp
+2025-04-27 10:42:57,238 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:42:57,238 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://cdn.suruga-ya.jp/database/pics_light/game/715011289....
+2025-04-27 10:42:57,238 - INFO - [parse_html_for_image:504] - Found image URL: https://cdn.suruga-ya.jp/database/pics_light/game/715011289.jpg
+2025-04-27 10:42:57,238 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.014s
+2025-04-27 10:42:57,238 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 0.800s for https://www.suruga-ya.jp/product/detail/715011289. Result: Found
+2025-04-27 10:42:57,239 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://cdn.suruga-ya.jp/database/pics_light/game/715011289.jpg
+2025-04-27 10:42:57,239 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://www.suruga-ya.jp/product/detail/715011289
+2025-04-27 10:42:57,346 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.107s. Status: 200
+2025-04-27 10:42:57,376 - DEBUG - [download_and_prepare_image:237] - Resizing image from 1024x1024 to 100x100
+2025-04-27 10:42:57,395 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.019s
+2025-04-27 10:42:57,396 - INFO - [process_excel_rows:873] - Row 7: Image successfully embedded into cell E7
+2025-04-27 10:42:57,396 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:42:58,401 - INFO - [process_excel_rows:817] - --- Processing Row 8, URL: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934 ---
+2025-04-27 10:42:58,401 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
+2025-04-27 10:43:01,416 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 3.015s
+2025-04-27 10:43:02,480 - INFO - [get_image_url_from_url:607] - Requests success for https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934 (Final: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934) - Status: 200
+2025-04-27 10:43:02,480 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
+2025-04-27 10:43:02,631 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.151s
+2025-04-27 10:43:02,631 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: www.amazon.co.jp
+2025-04-27 10:43:02,633 - DEBUG - [_parse_amazon_image:353] - Amazon specific: Found container with id 'imgTagWrapperId'
+2025-04-27 10:43:02,633 - INFO - [_parse_amazon_image:361] - Found potential main image via ID/Tag (Amazon): https://m.media-amazon.com/images/I/51Iewz4sX5L.__AC_SX300_S...
+2025-04-27 10:43:02,633 - INFO - [parse_html_for_image:504] - Found image URL: https://m.media-amazon.com/images/I/51Iewz4sX5L.__AC_SX300_SY300_QL70_ML2_.jpg
+2025-04-27 10:43:02,633 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.153s
+2025-04-27 10:43:02,633 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 4.232s for https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934. Result: Found
+2025-04-27 10:43:02,634 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://m.media-amazon.com/images/I/51Iewz4sX5L.__AC_SX300_SY300_QL70_ML2_.jpg
+2025-04-27 10:43:02,634 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://www.amazon.co.jp/dp/B0DDP2HT3F?aref=XimReVjw1x&aaxitk=da9cbfdb717aba0edddc93b94b18d030&language=ja_JP&pf_rd_p=90d9d1a8-9452-4445-a6fd-b4c298b2960b&pf_rd_r=5RZD0F9C5JG4VN3NX6AT&pd_rd_wg=YX643&pd_rd_w=NZQPf&pd_rd_r=5e43943c-e038-4608-b95d-6675c9a31247&smid=AN1VRQENFRJN5&ref=dacx_dp_579488626781210701_590031737948309934
+2025-04-27 10:43:02,743 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.108s. Status: 200
+2025-04-27 10:43:02,743 - DEBUG - [download_and_prepare_image:237] - Resizing image from 174x300 to 100x172
+2025-04-27 10:43:02,745 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.002s
+2025-04-27 10:43:02,746 - INFO - [process_excel_rows:873] - Row 8: Image successfully embedded into cell E8
+2025-04-27 10:43:02,746 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:43:03,753 - INFO - [process_excel_rows:817] - --- Processing Row 9, URL: https://item.rakuten.co.jp/pururunhime/8360_sele/ ---
+2025-04-27 10:43:03,754 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://item.rakuten.co.jp/pururunhime/8360_sele/
+2025-04-27 10:43:14,010 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 10.255s
+2025-04-27 10:43:14,062 - DEBUG - [feed:65] - SHIFT_JIS Japanese prober hit error at byte 368
+2025-04-27 10:43:14,196 - DEBUG - [feed:64] - GB2312 Chinese prober hit error at byte 76654
+2025-04-27 10:43:14,197 - DEBUG - [feed:64] - EUC-KR Korean prober hit error at byte 448
+2025-04-27 10:43:14,197 - DEBUG - [feed:64] - CP949 Korean prober hit error at byte 448
+2025-04-27 10:43:14,224 - DEBUG - [feed:64] - Big5 Chinese prober hit error at byte 76650
+2025-04-27 10:43:14,224 - DEBUG - [feed:64] - EUC-TW Taiwan prober hit error at byte 386
+2025-04-27 10:43:14,251 - DEBUG - [feed:64] - Johab Korean prober hit error at byte 76653
+2025-04-27 10:43:14,267 - DEBUG - [feed:134] - windows-1251 confidence = 0.010160864448061191, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,299 - DEBUG - [feed:134] - ISO-8859-5 confidence = 0.020782517200641594, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,365 - DEBUG - [feed:134] - ISO-8859-7 confidence = 0.02101996909674573, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,381 - DEBUG - [feed:134] - windows-1253 confidence = 0.021673120919084986, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,397 - DEBUG - [feed:134] - ISO-8859-5 confidence = 0.02726464854802756, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,413 - DEBUG - [feed:134] - windows-1251 confidence = 0.016383725846475204, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,480 - DEBUG - [feed:134] - windows-1255 confidence = 0.017928660587423758, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,495 - DEBUG - [feed:134] - windows-1255 confidence = 0.020016391772273823, below negative shortcut threshold 0.05
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - utf-8 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - SHIFT_JIS not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - EUC-JP Japanese confidence = 0.99
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - GB2312 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - EUC-KR not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - CP949 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - Big5 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - EUC-TW not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - Johab not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - windows-1251 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - KOI8-R Russian confidence = 0.11093260509764741
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - MacCyrillic Russian confidence = 0.01
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - IBM866 Russian confidence = 0.3142239593860739
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - IBM855 Russian confidence = 0.052211133342246696
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - ISO-8859-7 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - windows-1253 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - ISO-8859-5 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - windows-1251 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - TIS-620 Thai confidence = 0.1180878000592259
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - ISO-8859-9 Turkish confidence = 0.28801424486671773
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - windows-1255 Hebrew confidence = 0.0
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - windows-1255 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - windows-1255 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - utf-8 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - SHIFT_JIS not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:98] - EUC-JP Japanese confidence = 0.99
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - GB2312 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - EUC-KR not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - CP949 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - Big5 not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - EUC-TW not active
+2025-04-27 10:43:14,526 - DEBUG - [get_confidence:95] - Johab not active
+2025-04-27 10:43:14,531 - INFO - [get_image_url_from_url:607] - Requests success for https://item.rakuten.co.jp/pururunhime/8360_sele/ (Final: https://item.rakuten.co.jp/pururunhime/8360_sele/) - Status: 200
+2025-04-27 10:43:14,531 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://item.rakuten.co.jp/pururunhime/8360_sele/
+2025-04-27 10:43:14,545 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.014s
+2025-04-27 10:43:14,545 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: item.rakuten.co.jp
+2025-04-27 10:43:14,545 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:43:14,545 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/s...
+2025-04-27 10:43:14,545 - INFO - [parse_html_for_image:504] - Found image URL: https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
+2025-04-27 10:43:14,545 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.014s
+2025-04-27 10:43:14,545 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 10.791s for https://item.rakuten.co.jp/pururunhime/8360_sele/. Result: Found
+2025-04-27 10:43:14,546 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://shop.r10s.jp/pururunhime/cabinet/10341737/10642760/style202405-erabujpg.jpg
+2025-04-27 10:43:14,546 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://item.rakuten.co.jp/pururunhime/8360_sele/
+2025-04-27 10:43:14,661 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.115s. Status: 200
+2025-04-27 10:43:14,756 - DEBUG - [download_and_prepare_image:237] - Resizing image from 740x740 to 100x100
+2025-04-27 10:43:14,784 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.028s
+2025-04-27 10:43:14,785 - INFO - [process_excel_rows:873] - Row 9: Image successfully embedded into cell E9
+2025-04-27 10:43:14,785 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:43:15,791 - INFO - [process_excel_rows:817] - --- Processing Row 10, URL: https://netmall.hardoff.co.jp/product/3413159/ ---
+2025-04-27 10:43:15,792 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://netmall.hardoff.co.jp/product/3413159/
+2025-04-27 10:43:16,153 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 0.360s
+2025-04-27 10:43:16,209 - INFO - [get_image_url_from_url:607] - Requests success for https://netmall.hardoff.co.jp/product/3413159/ (Final: https://netmall.hardoff.co.jp/product/3413159/) - Status: 200
+2025-04-27 10:43:16,209 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://netmall.hardoff.co.jp/product/3413159/
+2025-04-27 10:43:16,229 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.020s
+2025-04-27 10:43:16,229 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: netmall.hardoff.co.jp
+2025-04-27 10:43:16,229 - DEBUG - [parse_html_for_image:488] - Trying standard metadata (og:image, twitter:image)
+2025-04-27 10:43:16,229 - INFO - [_extract_standard_metadata_image:386] - Found og:image: https://p1-d9ebd2ee.imageflux.jp/c!/w=1280,h=1280,a=0,u=1,q=...
+2025-04-27 10:43:16,229 - INFO - [parse_html_for_image:504] - Found image URL: https://p1-d9ebd2ee.imageflux.jp/c!/w=1280,h=1280,a=0,u=1,q=75/201144/IMG_1683882157423.jpg
+2025-04-27 10:43:16,229 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.020s
+2025-04-27 10:43:16,229 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 0.437s for https://netmall.hardoff.co.jp/product/3413159/. Result: Found
+2025-04-27 10:43:16,230 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://p1-d9ebd2ee.imageflux.jp/c!/w=1280,h=1280,a=0,u=1,q=75/201144/IMG_1683882157423.jpg
+2025-04-27 10:43:16,230 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://netmall.hardoff.co.jp/product/3413159/
+2025-04-27 10:43:16,384 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.154s. Status: 200
+2025-04-27 10:43:16,413 - DEBUG - [download_and_prepare_image:237] - Resizing image from 1280x997 to 100x77
+2025-04-27 10:43:16,439 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.025s
+2025-04-27 10:43:16,440 - INFO - [process_excel_rows:873] - Row 10: Image successfully embedded into cell E10
+2025-04-27 10:43:16,440 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:43:17,448 - INFO - [process_excel_rows:817] - --- Processing Row 11, URL: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397 ---
+2025-04-27 10:43:17,449 - INFO - [get_image_url_from_url:577] - Domain 'www.2ndstreet.jp' requires Selenium. Using Selenium directly for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:17,449 - INFO - [_get_image_url_with_selenium:519] - Attempting to fetch URL with Selenium: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:26,226 - DEBUG - [_get_image_url_with_selenium:524] - Selenium driver.get() completed in 8.776s
+2025-04-27 10:43:26,226 - DEBUG - [_get_image_url_with_selenium:530] - Waiting 0.5s for dynamic content...
+2025-04-27 10:43:26,727 - DEBUG - [_get_image_url_with_selenium:531] - Selenium wait completed in 0.501s
+2025-04-27 10:43:26,780 - DEBUG - [_get_image_url_with_selenium:536] - Selenium driver.page_source retrieved in 0.053s
+2025-04-27 10:43:26,780 - INFO - [_get_image_url_with_selenium:537] - Successfully fetched page source with Selenium (Final URL: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397)
+2025-04-27 10:43:26,781 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:26,898 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.118s
+2025-04-27 10:43:26,898 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: www.2ndstreet.jp
+2025-04-27 10:43:26,901 - INFO - [_parse_2ndstreet_image:305] - Found image via 2ndstreet.jp specific logic (goodsImages).
+2025-04-27 10:43:26,901 - INFO - [parse_html_for_image:504] - Found image URL: https://cdn2.2ndstreet.jp/img/pc/goods/224130/01/04571/1.jpg
+2025-04-27 10:43:26,901 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.121s
+2025-04-27 10:43:26,901 - INFO - [_get_image_url_with_selenium:543] - Found image URL using Selenium for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:26,901 - INFO - [get_image_url_from_url:586] - URL processing (Selenium Direct) took 9.452s for https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:26,901 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://cdn2.2ndstreet.jp/img/pc/goods/224130/01/04571/1.jpg
+2025-04-27 10:43:26,901 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://www.2ndstreet.jp/goods/detail/goodsId/2241300104571/shopsId/31397
+2025-04-27 10:43:27,025 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.124s. Status: 200
+2025-04-27 10:43:27,025 - DEBUG - [download_and_prepare_image:237] - Resizing image from 900x1200 to 100x133
+2025-04-27 10:43:27,038 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.013s
+2025-04-27 10:43:27,039 - INFO - [process_excel_rows:873] - Row 11: Image successfully embedded into cell E11
+2025-04-27 10:43:27,039 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:43:28,045 - INFO - [process_excel_rows:817] - --- Processing Row 12, URL: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2 ---
+2025-04-27 10:43:28,045 - INFO - [get_image_url_from_url:590] - Attempting to fetch URL with requests: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
+2025-04-27 10:43:29,264 - DEBUG - [get_image_url_from_url:598] - requests.get() completed in 1.218s
+2025-04-27 10:43:29,339 - INFO - [get_image_url_from_url:607] - Requests success for https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2 (Final: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2) - Status: 200
+2025-04-27 10:43:29,339 - DEBUG - [parse_html_for_image:466] - Start parsing HTML for: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
+2025-04-27 10:43:29,360 - DEBUG - [parse_html_for_image:472] - BeautifulSoup parsed in 0.021s
+2025-04-27 10:43:29,360 - DEBUG - [parse_html_for_image:478] - Checking site-specific parsers for domain: www.okoku.jp
+2025-04-27 10:43:29,361 - INFO - [_parse_okoku_image:290] - Found image via okoku.jp specific logic (bxslider).
+2025-04-27 10:43:29,361 - INFO - [parse_html_for_image:504] - Found image URL: https://www.okoku.jp/ec/img/616/2200003264616/2200003264616_m.jpg
+2025-04-27 10:43:29,361 - DEBUG - [parse_html_for_image:505] - parse_html completed in 0.022s
+2025-04-27 10:43:29,361 - INFO - [get_image_url_from_url:656] - URL processing (Hybrid) took 1.316s for https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2. Result: Found
+2025-04-27 10:43:29,362 - DEBUG - [download_and_prepare_image:195] - Starting image download for: https://www.okoku.jp/ec/img/616/2200003264616/2200003264616_m.jpg
+2025-04-27 10:43:29,362 - DEBUG - [download_and_prepare_image:199] - Using Referer: https://www.okoku.jp/ec/pro/disp/1/2200003264616?sFlg=2
+2025-04-27 10:43:29,434 - DEBUG - [download_and_prepare_image:204] - Image download completed in 0.072s. Status: 200
+2025-04-27 10:43:29,454 - DEBUG - [download_and_prepare_image:237] - Resizing image from 450x600 to 100x133
+2025-04-27 10:43:29,459 - DEBUG - [download_and_prepare_image:258] - Image processing completed in 0.006s
+2025-04-27 10:43:29,461 - INFO - [process_excel_rows:873] - Row 12: Image successfully embedded into cell E12
+2025-04-27 10:43:29,461 - DEBUG - [process_excel_rows:901] - Sleeping for 1.0 seconds...
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 13: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 14: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 15: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 16: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 17: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 18: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 19: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 20: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 21: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 22: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 23: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 24: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 25: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 26: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 27: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 28: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 29: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 30: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 31: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 32: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 33: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 34: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 35: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 36: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 37: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 38: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 39: Skipping empty URL.
+2025-04-27 10:43:30,466 - DEBUG - [process_excel_rows:793] - Row 40: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 41: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 42: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 43: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 44: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 45: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 46: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 47: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 48: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 49: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 50: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 51: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 52: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 53: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 54: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 55: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 56: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 57: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 58: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 59: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 60: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 61: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 62: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 63: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 64: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 65: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 66: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 67: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 68: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 69: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 70: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 71: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 72: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 73: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 74: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 75: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 76: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 77: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 78: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 79: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 80: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 81: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 82: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 83: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 84: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 85: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 86: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 87: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 88: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 89: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 90: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 91: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 92: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 93: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 94: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 95: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 96: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 97: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 98: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 99: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 100: Skipping empty URL.
+2025-04-27 10:43:30,467 - DEBUG - [process_excel_rows:793] - Row 101: Skipping empty URL.
+2025-04-27 10:43:30,602 - INFO - [__exit__:105] - WebDriverを終了しました。(0.135s)
+2025-04-27 10:43:30,613 - INFO - [save_workbook:920] - Excel file saving completed in 0.010s
+2025-04-27 10:43:30,613 - INFO - [main:1112] - Workbook closed.
+2025-04-27 10:43:30,613 - INFO - [main:1117] - Script execution finished. Total time: 47.19 seconds.
