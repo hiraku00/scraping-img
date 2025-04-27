@@ -101,21 +101,25 @@ python scraping.py mydata.xlsx --sheet "商品リスト"
 4.  **既存データクリア:** `(work)画像URL` 列、**D 列**、**E 列** の既存データと、シート上の全ての**既存画像**をクリアします。
 5.  **WebDriver 準備 (必要な場合):** `--skip-selenium` が指定されていない場合、`WebDriverManager` を使用して Selenium WebDriver (ヘッドレス Chrome) を初期化します。失敗した場合は警告を表示し、Selenium を使用しない処理を試みます。
 6.  **URL 処理ループ:** 2 行目から最終行まで処理します。
-  a. **URL 取得:** `URL` 列から URL を読み取ります。空の場合は `--all` オプションに従って処理を中断または続行します。無効な形式の場合はエラーを記録してスキップします。
-  b. **処理マーク:** 有効な URL があれば、まず**D 列に `-` を書き込みます**。
-  c. **画像 URL 抽出 (get_image_url_from_url):**
-  i. ドメインが `SELENIUM_ONLY_DOMAINS` に含まれるかチェック。
-  ii. 含まれない場合、`requests` でアクセスし HTML を取得。
-  iii. 取得した HTML を `parse_html_for_image` で解析（サイト固有ロジック → メタタグ → JSON-LD → フォールバック `<img>` の順）。
-  iv. `requests` 失敗時、または `SELENIUM_ONLY_DOMAINS` の場合、Selenium でページを取得し、再度 `parse_html_for_image` で解析。
-  v. 結果（画像 URL またはエラーメッセージ）を `(work)画像URL` 列に書き込みます。成功時はハイパーリンクも設定します。
-  d. **画像ダウンロードと埋め込み (download_and_prepare_image):**
-  i. 画像 URL が取得できた場合、`requests` で画像をダウンロード（`Referer` ヘッダー付与）。
-  ii. `Pillow` で画像を開き、リサイズし、適切な形式で `BytesIO` に保存。
-  iii. `openpyxl` を使用して `BytesIO` から画像を読み込み、**固定の E 列**に埋め込み。
-  iv. 行の高さと E 列の幅を自動調整。
-  v. 失敗した場合はエラーメッセージを E 列に書き込みます。
-  e. **待機:** `--sleep` で指定された時間待機します。
+
+    a. **URL 取得:** `URL` 列から URL を読み取ります。空の場合は `--all` オプションに従って処理を中断または続行します。無効な形式の場合はエラーを記録してスキップします。
+    b. **処理マーク:** 有効な URL があれば、まず**D 列に `-` を書き込みます**。
+    c. **画像 URL 抽出 (get_image_url_from_url):**
+
+        i. ドメインが `SELENIUM_ONLY_DOMAINS` に含まれるかチェック。
+        ii. 含まれない場合、`requests` でアクセスし HTML を取得。
+        iii. 取得した HTML を `parse_html_for_image` で解析（サイト固有ロジック → メタタグ → JSON-LD → フォールバック `<img>` の順）。
+        iv. `requests` 失敗時、または `SELENIUM_ONLY_DOMAINS` の場合、Selenium でページを取得し、再度 `parse_html_for_image` で解析。
+        v. 結果（画像 URL またはエラーメッセージ）を `(work)画像URL` 列に書き込みます。成功時はハイパーリンクも設定します。
+
+    d. **画像ダウンロードと埋め込み (download_and_prepare_image):**
+        i. 画像 URL が取得できた場合、`requests` で画像をダウンロード（`Referer` ヘッダー付与）。
+        ii. `Pillow` で画像を開き、リサイズし、適切な形式で `BytesIO` に保存。
+        iii. `openpyxl` を使用して `BytesIO` から画像を読み込み、**固定の E 列**に埋め込み。
+        iv. 行の高さと E 列の幅を自動調整。
+        v. 失敗した場合はエラーメッセージを E 列に書き込みます。
+
+    e. **待機:** `--sleep` で指定された時間待機します。
 7.  **WebDriver 終了:** WebDriver を使用した場合、`WebDriverManager` が適切に終了処理を行います。
 8.  **保存:** 処理が行われた場合（またはデバッグモード時）、変更内容を Excel ファイルに保存します（**推奨: 別名で保存**）。
 
